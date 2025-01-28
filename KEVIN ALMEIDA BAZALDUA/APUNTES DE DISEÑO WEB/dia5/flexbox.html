@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+
+    <style>
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #eb9d37;
+    border: 3px solid black;
+    box-shadow: inset 10px 10px 10px rgb(253,200,102); /* inset sombra interna */
+    border-radius: 255px 15px 225px 15px/1px 2px 3px 4px;
+    filter: drop-shadow(  2px 2px 2px rgba(0,0,0,0.5)  );
+
+    /*centrar contenido*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.boxdouble{
+    width: 200px;
+}
+.purplebox {
+    background-color: purple;
+    padding: 5px;
+    height: 250px;
+}
+.flexx{
+/*propiedades de flex*/
+display: flex;
+gap: 4px;
+
+color: white;
+filter: drop-shadow(  2px 2px 2px rgba(166, 166, 166)  );
+font-weight: bold;
+font-size: x-large;
+}
+.ej1{
+    flex-direction: row;
+    flex-direction: column;
+    flex-direction: row-reverse;
+}
+
+
+.ej2{
+/*flex-direction: row;
+flex-wrap: wrap-reverse;*/
+
+flex-flow: row wrap;
+
+}
+
+.ej3{
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+
+    justify-content: space-evenly; /* todos por igual*/
+    justify-content: space-between;
+    justify-content: space-around;/*LOS LATERALES SON 1/2 DE LOS CENTRALES*/
+
+
+}
+   
+   </style>
+</head>
+<body>
+
+    <h3>Flex Direction</h3>
+
+    <p>Dirección y selección del ejec principal de nuestros elementos hijos.
+        Opciones de row,colum,row -reverse y column reverse</p>
+
+
+    <div class="flexx ej1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+    
+    <h3>flex wrap</h3>
+<p>controla si los elemntos se ajustan a la misma fila o se desplaza a la siguiente.conserva</p>
+<br>
+podemos utilar <b>flex-flow:row wrap</b>para combinar elementos(flex-direction+wrap)
+
+    <div class="flexx ej2 purplebox">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box boxdouble">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+    <h3>justify content</h3>
+
+    <div class="flexx ej3 purplebox">
+        <div class="box boxdouble">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+</body>
+</html>
