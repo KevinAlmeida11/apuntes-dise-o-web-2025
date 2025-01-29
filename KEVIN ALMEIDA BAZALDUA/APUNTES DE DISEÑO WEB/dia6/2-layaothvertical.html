@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout vertical</title>
+
+    <style>
+  /*Reset css*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+
+
+        }
+
+
+        .header,.footer{
+            background-color: palegreen;
+             padding: 10px;
+             height: 25vh;
+
+        }
+
+        .content{
+
+             background-color: rgb(194, 175, 93);
+            padding: 10px;
+            height: 50vh;
+            /* overflow-y:scroll;*/
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="content">contenido</div>
+        <div class="footer">pie</div>
+    </div>    
+</body>
+</html>
