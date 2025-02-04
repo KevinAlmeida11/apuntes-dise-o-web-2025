@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otros Inputs</title>
+</head>
+<body>
+    
+    <form action="./" method="GET"> 
+        <label for="text-usuario">Usuario</label>
+        <input type="text" id="txt-usuario"name="txt-usuario"placeholder="Usuario">
+        <br>
+        <label for="txt-email">Email</label>
+        <input type="email" id="txt-email" name="txt-email"placeholder="Tu Correo">
+        <br>
+        <label for="txt-clave">Clave</label>
+        <input type="password" id="txt-clave" name="txt-clave"placeholder="Tu clave">   
+        <br>
+        <label for="txt-info">Biografía</label>
+        <textarea name="descripcion" id="txt-info" rows="5"></textarea>
+        <br>
+        <label for="rd-edad">Mayor de 18</label>
+        <input type="radio"checked id="rd-edad" name="rd-edad" value="mayor">
+        <br>
+        <label for="rd-edad-edad">Menor de 18</label>
+        <input type="radio"id="rd-edad-menor" name="rd-edad" value="menor">
+        <br>
+        <label for="rd-edad-no">No contesta</label>
+        <input type="radio"id="rd-edad-no" name="rd-edad" value="no-contesta">
+        
+        <h3>Hobbies</h3>
+        <br>
+        <input type="checkbox" id="chk-futbol" name="chk-futbol"value="futbol">
+        <label for="chk-futbol">futbol</label>
+        <br>
+        <input type="checkbox" checked id="chk-volley" name="chk-volley"value="volley">
+        <label for="chk-volley">volley</label>
+        <br> 
+        <input type="checkbox" checked id="chk-leer" name="chk-leer"value="leer">
+        <label for="chk-leer">leer</label>
+        <br>
+
+        <label for="select_puesto">Trabajo</label>
+        <select name="select_puesto" id="selecto_puesto">
+            <option value="estudiante">Estudiante</option>
+            <option select value="profesor">Profesor</option>
+            <option value="medico">Médico</option>
+        </select>
+
+
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <form action="/action_page.php">
+        <label for="quantity">Números de mascotas</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+        <input type="submit" value="Submit">
+      </form>
+      
+      
+ 
+
+
+</body>
+</html>
