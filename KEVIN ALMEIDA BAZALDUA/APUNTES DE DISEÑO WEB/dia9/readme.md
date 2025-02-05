@@ -32,13 +32,50 @@ Forma de nombrar nuestras clases CSS para mantener codigo limpio y ordenado.Busc
 
 -[BEM](https://getbem.com/naming)
 
+## para que?
+1. comunicar un proposito o funcion.
+2. comunicar la estructura del componente.
+3. marca una especificidad baja consistencia.
+
+[specificity](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdkerupv5p9lu9k10w5l1.png)
+
+su nombre es en "kebab-case" separando__para elementos y -- para modificadores.
+
+Ejemplo:
+
+.[bloque]__[elemento]--[modificador]
+
+el nombre de clase BEM posee 3 partes:
+
+1. **Bloque**:el nombre del componente,el cual por si solo tiene sentido:card,header,container,button,footer,menu.
+2. **Elementos**:dentro de un bloque que puede haber uno o mas elemntos.Estas partes no tienen sentido por si solos:"menu item","list item",checkbox label","header title"
+3. **Modificadores**:Una variacion o estado diferent para un bloque o elemnto.que cambia la apariencia o comportamiento del mismo. "xmas",disable,highlighted,checked,size big,"color yellow".no olvidemos que si adgregamos un modificador,la etiqueta debe tambien incluir el nombre del elento o bloque.
+eje:<div class="footer footer-red"></div>
+
+   
+
 <style>
+
+    /*usando BEM*/
     .card{
 
     }
     .card__header{}
     .card__content{}
     .card__footer{}
+    /*sin utilizar metodologia*/
+    form input{}
+    .form__input{}
+
+
+    form input #item1 .card{
+        color:red
+    }
+
+   form{
+    color:
+    }
+    div{}
 
  </style>
 
