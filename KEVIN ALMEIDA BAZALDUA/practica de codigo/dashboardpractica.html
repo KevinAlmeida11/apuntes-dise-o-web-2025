@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Completo</title>
+
+    <style>
+        /* Reset de HTML */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Contenedor Layout General */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color:#F4F1E1 ;
+        }
+
+        /* main: incluye sidebar + content */
+        .main {
+            display: flex;
+            flex: 1;
+        }
+
+        /* Estilos para la navegación del sidebar */
+        .sidebar {
+            background-color:#263341;
+            width: 200px;
+            padding: 10px;
+            
+        }
+
+        .sidebar ul {
+            margin: 10px;
+            list-style-type: none;
+        
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color:#F4F1E1;
+        }
+
+        .sidebar a:hover {
+            color: #ccd394;
+        }
+
+
+        /* EStilos para el contenido */
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+
+        }
+
+        .section {
+            padding: 10px;
+            background-color: #F4F1E1;
+        }
+
+        .section a{
+            color:#263341 ;
+        }
+       
+        .cerrarsesion{
+           
+           text-align:right;
+            padding: 5px;
+            background-color:#F4F1E1;
+            height: 30px;
+        }
+
+        .cerrarsesion a{
+            text-decoration: none;
+            color: #263341;
+            
+        }
+
+        .search{
+         display: flex;
+        align-items: center;
+         }
+
+        .texto-search {
+         background-color: #ffffff;
+         border-radius: 0 8px 8px 0px;
+         height: 50px;
+        width: 300px;
+        align-content: center;
+        color:#263341;
+        }
+
+        .lupita{
+        background-color: #263341;
+        height: 50px;
+        width: 50px;
+        }
+
+        /*reglas del grip*/
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .grid-card {
+
+            background-color: gray;
+            color: white;
+            padding: 20px;
+
+            flex-grow: 1;
+            /*permite al box crecer*/
+            flex-shrink: 0;
+            /*permite ser mas pequeña */
+            flex-basis: 200px;
+            /*valor incial*/
+
+            flex: 1 0 200px;
+            /*es lo mismo que las 3 propiedades anteriores*/
+        }
+
+
+        /*utility class*/
+        .card {
+
+            box-shadow: 2px 2px 5px #bbbbbb;
+            margin: 5px;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+    container: Es el contenedor principal que engloba todo el layout.
+    header: Se coloca en la parte superior de la página.
+    main: Contiene el contenido principal de la página, que incluye el sidebar y el content.
+    sidebar: Se coloca a la izquierda dentro del main.
+    content: Se coloca a la derecha dentro del main y contiene múltiples sections.
+    section: Representa las secciones de contenido dentro del content.
+    footer: Se coloca en la parte inferior de la página, fuera del main. 
+    -->
+
+    <!-- container: Contenedor que engloba todo el layout -->
+    <div class="container">
+
+        <!-- main: Contenido Principal (incluye sidebar que también es parte del contenido) -->
+        <div class="main">
+            <div class="sidebar">
+                <h2>Logo</h2>
+                <ul>
+                    <li><a href="#">Mis libros</a></li>
+                    <li><a href="#">Libros que he alquilado</a></li>
+                    <li><a href="#">Mi perfil</a></li>
+                </ul>
+            </div>
+
+            <!-- Contenido a la derecha: Nuestro container de secciones  -->
+            <div class="content">
+
+
+                <div class="cerrarsesion">
+
+                <a href="#">Cerrar Sesión</a>
+                </div>
+
+                <div class="search">
+                    <img class="lupita" src="./img/lupita blanca.png" alt="Lupita">
+                    <div class="texto-search">Buscar libro</div>
+                </div>
+
+                <div class="section">
+                    <h2>Libros Populares</h2>
+                  
+                </div>
+
+                <div class="grid-container">
+
+
+                    <!--div.card+6>{tarjeta $} -->
+                    <div class="grid-card">tarjeta1</div>
+                    <img src="" alt="">
+                    <div class="grid-card">tarjeta2</div> 
+
+                    <div class="grid-card">tarjeta3</div>
+
+                    <div class="grid-card">tarjeta4</div>
+
+                    <div class="grid-card">tarjeta5</div>
+
+                    <div class="grid-card">tarjeta6</div>
+                </div>
+
+
+              
+                
+
+            </div>
+        </div>
+
+    
+
+    </div>
+
+</body>
+
+</html>

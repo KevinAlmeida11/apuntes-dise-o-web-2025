@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+       
+       .content {
+            display: flex;
+            justify-content: center;
+            background-color: bisque;
+            text-align: center;
+            padding: 40px;
+            transition: background-color 0.5s ease-in-out; 
+            /* ease-in-out significa que la animación comienza y termina lentamente, con una velocidad más rápida en el medio. */
+        }   
+        
+        .content__title {
+            font-size: 24px;
+            font-weight: bold;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;  
+        }
+        /* opacity 0.5s ease-in-out:Hace que la opacidad cambie suavemente en 0.5 segundos.
+        ease-in-out significa que la animación comienza y termina lentamente, con una velocidad más rápida en el medio.
+        visibility 0.5s ease-in-out:
+        Aplica el mismo efecto a la visibilidad, asegurando que los elementos no aparezcan o desaparezcan bruscamente. */
+
+        .content__title--tablet{
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .content__title--desktop{
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        img{
+            width: 290px;
+            height: 440px;
+            object-fit: cover; /* asegura que las imágenes mantengan su proporción y llenen completamente el espacio definido sin distorsionarse */
+        }
+       
+        @media screen and (min-width: 768px) {
+            .content {
+                background-color: lightblue;
+            }
+            .content__title {
+                opacity: 0;
+                visibility: hidden;
+            }
+           .content__title--tablet{
+            opacity: 1;
+            visibility: visible;
+            }
+        }
+        /* Si un título cambia de opacity: 0 (invisible) a opacity: 1 (visible), la transición hará que el cambio ocurra gradualmente en lugar de instantáneamente.
+        La propiedad visibility: hidden; en CSS hace que un elemento sea invisible, pero sigue ocupando espacio en la página. */
+
+       /* Diferencias con display: none;
+       
+            visibility: hidden; → El elemento no se ve, pero su espacio sigue reservado.
+            display: none; → El elemento desaparece completamente y no ocupa espacio. */ 
+
+
+        @media screen and (min-width: 1024px) {
+            .content {
+                background-color: lightgreen;
+            }
+            .content__title--tablet{
+                opacity: 0;
+                visibility: hidden;
+            }
+            .content__title--desktop{
+                opacity: 1;
+                visibility: visible;
+            }
+            
+        }
+
+     
+    </style>
+</head>
+<body class="content">
+    <header class="content__header">
+        <h1 class="content__title "> Mobile</h1>
+        <p class="content__title content__title--tablet">Tablet</p>
+      
+        <picture>
+            <source media="(min-width: 1024px)" srcset="./img/grande.jpg">
+            <source media="(min-width: 768px)" srcset="./img/mediana.jpg">
+            <img src="./img/perrito.jpg" alt="perrito" class="content__image">
+        </picture>
+       
+        <p class="content__title content__title--desktop">Desktop</p>
+    </header>
+</body>
+</html>
