@@ -21,7 +21,7 @@
             justify-content: center;
             background-color: bisque;
             text-align: center;
-            height: 100vh;
+            width: 100vw;
             padding: 40px;
             transition: background-color 0.5s ease-in-out; 
             /* ease-in-out significa que la animación comienza y termina lentamente, con una velocidad más rápida en el medio. */
@@ -96,17 +96,19 @@
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1 class="content__title "> Mobile</h1>
-        <p class="content__title content__title--tablet">Tablet</p>
-      
-        <picture>
+  <div class="content">
+    <div class="title">
+        <h1 class="title__h1 title__h1--mobile"> Mobile</h1>
+        <h1 class="title__h1 title__h1--tablet">Tablet</h1>
+        <h1 class="title_h1 title__h1--desktop">Desktop</h1>
+        <picture class="picture">
             <source media="(min-width: 1024px)" srcset="./img/grande.jpg">
             <source media="(min-width: 768px)" srcset="./img/mediana.jpg">
-            <img src="./img/perrito.jpg" alt="perrito" class="content__image">
+            <img class="picture__img" src="./img/perrito.jpg" alt="perrito" class="content__image">
         </picture>
        
-        <p class="content__title content__title--desktop">Desktop</p>
+       
     </div>
+</div>  
 </body>
 </html>
