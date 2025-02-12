@@ -1,143 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAUSA ACEVICHADA</title>
+    <title>Causa Acevichada</title>
     <style>
-        
-        /* Reset CSS */
-         * {
+        * {
             margin: 0;
-            padding:0;
+            padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-    .header{
-        background-color: lightskyblue;
-        display: flex;
-       
-        
-       
-    }
-    .logo{
-        width: 70px;
-    }
-
-    .nav {
-        width: 100vw;
-        color: coral;
-        font-size: large;
-        font-weight: bold;
-    }
-
-    .nav__list {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        justify-content:right;
-       padding: 15px;
-        gap:40px
-    }
-    .main{
-        
-    }
-
-    .title{
-        font-size: x-large;
-    }
-
-    .ingredientes{
-       
-        background-color: rgb(217, 224, 224);
-        border-radius: 10px;
-    }
-
-    .imagen-principal{
-        
-    }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header {
+            background-color: #0077b6;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+        }
+        .logo {
+            width: 70px;
+            margin-right: 15px;
+        }
+        .nav__list {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav__list li {
+            cursor: pointer;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .nav__list li:hover {
+            color: #ffdd57;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            text-align: center;
+            font-size: 2rem;
+            color: #0077b6;
+        }
+        .imagen-principal img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .ingredientes, .preparacion, .info-adicional {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef6f7;
+            border-radius: 10px;
+        }
+        h2, h3 {
+            color: #0077b6;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        aside {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #0077b6;
+            color: white;
+            margin-top: 20px;
+        }
+        .receta-recomendada {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;  
+        }
+        .receta-recomendada a{
+            text-decoration: none;
+            color:#333
+        }
+        .receta-recomendada img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <img class="logo" src="./img/logo.png" alt="Logo-receta">
-        <nav class="nav">
+        <nav>
             <ul class="nav__list">
                 <li>Inicio</li>
                 <li>Quienes Somos</li>
                 <li>Platos</li>
                 <li>Reserva</li>
-
             </ul>
         </nav>
     </header>
 
-    <main class="main">
-        <article class="content">
-            <section >
-                <h1 class="title">Causa Acevichada</h1>
-                <figure class="imagen-principal">
-                    <img src="./img/causa-acevichada.jpg" alt="causa-acevichada">
-                    <figcaption>Es un plato que combina dos de los platos más populares del Perú: la causa limeña y el ceviche.</figcaption>
-                </figure>    
-            </section>
+    <article class="container">
+        <h1 class="title">Causa Acevichada</h1>
+        <figure class="imagen-principal">
+            <img src="./img/causa-acevichada.jpg" alt="Causa Acevichada">
+            <figcaption>Una deliciosa fusión de causa limeña y ceviche.</figcaption>
+        </figure>
 
-            <section class="ingredientes" >
-                <h2>Ingredientes</h2><br>
-                <h3>Para la causa</h3>
-                <ul>
-                    <li>500 gramos de papas amarillas</li>
-                    <li>1 chorro de aceite</li>
-                    <li>4 cucharadas soperas de pasta de ají amarillo</li>
-                    <li>sal al gusto</li>
-                    <li>2 paltas</li>
-                </ul>
-                <h3>Para el ceviche</h3>
-                <ul>
-                    <li>4 filetes de pescado</li>
-                    <li>2 cebollas</li>
-                    <li>1 rama de apio</li>
-                    <li>3 dientes de ajo</li>
-                    <li>1 trozo de kion</li>
-                    <li>1 cubilete de chilcano o caldo de pescado</li>
-                    <li>7 limones</li>
-                    <li>1 ají limo</li>
-                    <li> 1 rama de culantro</li>
-                    <li>sal al gusto</li>
-                </ul>
-            </section>
-            <section class="preparacion">
-                <h2>Preparación</h2>
-                
-                <ol>
-                    <li>Sancocha las papas amarillas</li>
-                    <li>Rápidamente, pélalas y colócalas en el prensador para que al aplastarlas no requiera mucho esfuerzo. Luego, deja enfriar.</li>
-                    <li>Sazona la papa echando un buen chorro de aceite, el jugo de 4 limones, la pasta de ají amarillo y sal al gusto. Amasa bien hasta obtener una masa homogénea y reserva.</li>
-                    <li>Para el ceviche, corta los filetes de pescado en cubos medianos y regulares. Las piezas que no te quedaron de esta forma no las deseches, resérvalas para hacer leche de tigre. Coloca los cubos de pescado en un bowl y sazónalos con media cucharadita de ajo molido y una pizca de sal. Resérvalos en la refrigeradora.</li>
-                    <li>Corta la cebolla en pluma, es decir, empieza retirando los 2 extremos de la cebolla, pártela por la mitad, quita la capa más externa además del corazón (este último resérvalo para hacer la leche de tigre) y con la parte plana sobre una tabla corta tiras delgadas. Reserva.</li>
-                    <li>Para la leche de tigre vierte en la licuadora un trozo de apio, el corazón de la cebolla, unos dientes de ajo, un trozo de kion pelado, la merma de pescado, caldo de pescado o chilcano, una cucharadita de sal y jugo de limón. Licúa bien y luego cuela.</li>
-                    <li>Agrega culantro y ají limo, ambos finamente picados, al bowl del pescado y añade un poco de la cebolla en pluma. Remueve bien.</li>
-                    <li>Termina el ceviche agregando un buen chorro de leche de tigre y el jugo de limón. Rectifica la sazón.</li>
-                    <li>Sirve inmediatamente</li>
+        <section class="ingredientes">
+            <h2>Ingredientes</h2>
+            <h3>Para la causa</h3>
+            <ul>
+                <li>500 gramos de papas amarillas</li>
+                <li>1 chorro de aceite</li>
+                <li>4 cucharadas de pasta de ají amarillo</li>
+                <li>Sal al gusto</li>
+                <li>2 paltas</li>
+            </ul>
+            <h3>Para el ceviche</h3>
+            <ul>
+                <li>4 filetes de pescado</li>
+                <li>2 cebollas</li>
+                <li>1 rama de apio</li>
+                <li>3 dientes de ajo</li>
+                <li>1 trozo de kion</li>
+                <li>1 taza de caldo de pescado</li>
+                <li>7 limones</li>
+                <li>1 ají limo</li>
+                <li>1 rama de culantro</li>
+                <li>Sal al gusto</li>
+            </ul>
+        </section>
 
-                </ol>
-            </section>
-            
-        </article>
-        <aside>
-            
-           <section>
-            <h3>Receta Causa de Pescado</h3>
-            <img src="" alt="">
-           </section>
+        <section class="preparacion">
+            <h2>Preparación</h2>
+            <ol>
+                <li>Sancocha las papas y pélalas.</li>
+                <li>Prénsalas y sazónalas con aceite, limón, ají amarillo y sal.</li>
+                <li>Corta el pescado en cubos y mézclalo con ajo y sal.</li>
+                <li>Corta la cebolla en pluma y resérvala.</li>
+                <li>Prepara la leche de tigre licuando apio, cebolla, ajo, kion, pescado, caldo y limón.</li>
+                <li>Mezcla el pescado con la leche de tigre y agrega culantro y ají limo.</li>
+                <li>Sirve inmediatamente sobre la causa.</li>
+            </ol>
+        </section>
 
-           <section> 
-            <h3>Receta Escabeche de Pescado</h3>
-            <img src="" alt="">
-            </section>
-
-
+        <aside class="info-adicional">
+            <h2>Información Adicional</h2>
+            <p><strong>Tiempo de preparación:</strong> Aproximadamente 45 minutos.</p>
+            <p><strong>Valor nutricional:</strong> 350 kcal por porción.</p>
+            <h3>Otras recetas recomendadas:</h3>
+            <div class="receta-recomendada">
+                <img src="./img/causa-pollo.jpg" alt="Causa de Pollo">
+                <a href="#">Causa de Pollo</a>
+            </div>
+            <div class="receta-recomendada">
+                <img src="./img/tiradito.jpg" alt="Tiradito de Pescado">
+                <a href="#">Tiradito de Pescado</a>
+            </div>
+            <div class="receta-recomendada">
+                <img src="./img/lechedetigre.jpg" alt="Leche de Tigre">
+                <a href="#">Leche de Tigre</a>
+            </div>
         </aside>
-    </main>
+    </article>
 
+    <footer class="footer">
+        <p>¿Te gustó esta receta? ¡Compártela con tus amigos y visita más recetas en CheffConnect!</p>
+    </footer>
 </body>
 </html>
