@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plantilla1</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .grid-Container{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+           
+            grid-gap:1em;
+            height: 100vh;
+            color: white;
+            margin:10px;
+        }
+
+        .item1 {
+            border: 1px solid gray;
+            grid-column: 1;
+            
+            background-color: brown;
+        }
+        .item2 {
+            border: 1px solid gray;
+            grid-column: 2;
+            
+            background-color: aqua;
+        }
+        .item3 {
+            border: 1px solid gray;
+            grid-column: 3;
+            
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-Container">
+        <div class="item1">uno</div>
+        <div class="item2">dos</div>
+        <div class="item3">tres</div>
+       
+    </div>
+</body>
+</html>

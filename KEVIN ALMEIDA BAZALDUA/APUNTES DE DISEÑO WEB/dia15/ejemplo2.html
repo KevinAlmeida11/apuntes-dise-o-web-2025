@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo 2</title>
+    <style>
+         /* Reset CSS */
+         * {
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .grid-Container{
+            display:grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows:25% 25% 25% 25%;
+            grid-gap:1em;
+            height: 100vh;
+            color: white;
+            margin:10px;
+
+            
+            
+            
+        }
+        .item1 {
+            border: 1px solid gray;
+            grid-column-start: 1;
+            grid-column-end:3;
+            background-color: brown;
+        }
+        .item2 {
+            border: 1px solid gray;
+            grid-column: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            background-color: aqua;
+        }
+        .item3 {
+            border: 1px solid gray;
+            grid-column: 1;
+            grid-row-start: 2;
+            grid-row-end: 5;
+            background-color: greenyellow;
+        }
+        .item4{
+            border: 1px solid gray;
+            grid-column: 3;
+            grid-row: 3;
+            background-color: blue;
+        }
+        .item5 {
+            border: 1px solid gray;
+            grid-column: 2;
+            grid-row: 4;
+            background-color:orange;
+        }
+        .item6 {
+            border: 1px solid gray;
+            grid-column: 3;
+            grid-row: 4;
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-Container">
+        <div class="item1">uno</div>
+        <div class="item2">dos</div>
+        <div class="item3">tres</div>
+        <div class="item4">cuatro</div>
+        <div class="item5">cinco</div>
+        <div class="item6">seis</div>
+    </div>
+</body>
+</html>
