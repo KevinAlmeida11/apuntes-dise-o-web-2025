@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gridt-emplate-areas</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .gridtemplate {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            grid-gap: 10px;
+            grid-template-areas:
+                "header header header"
+                "sidebar content-1 content-1"
+                "sidebar content-2 content-3"
+                "footer footer footer";
+        }
+
+        .Header-box {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            font-size: 18px;
+            font-weight: bold;
+
+            /* Flex para centrar texto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Sidebar-box {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            font-size: 18px;
+            font-weight: bold;
+
+            /* Flex para centrar texto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Content-box {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            font-size: 18px;
+            font-weight: bold;
+
+            /* Flex para centrar texto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Footer-box {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            font-size: 18px;
+            font-weight: bold;
+
+            /* Flex para centrar texto */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridtemplate">
+        <header class="Header-box">header</header>
+        <main>
+            <aside>
+                <div class="Sidebar-box">sidebar</div>
+            </aside>
+            <div>
+                <div class="Content-box">content-1</div>
+                <div class="Content-box">content-2</div>
+                <div class="Content-box">conten-3</div>
+            </div>
+        </main>
+        <footer class="Footer-box">footer</footer>
+    </div>
+</body>
+
+</html>

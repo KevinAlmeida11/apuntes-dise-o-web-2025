@@ -86,6 +86,91 @@ Se escribe con camelCase y usa la palabra `is-`delante.
 <article class="Tweet is-expanded">
     ...
 </article>
-````
+```
 
+# Grid continuación (2/2)
 
+existe la opcion minmax() que nos permite definir un tamaño minimo y maximo para las columnas y filas.
+```css
+
+.container{
+    display:grid;
+    grid-template-columns: minmax(100px,1fr) minmax(200px,2fr)minmax(100px,1fr);
+    grid-template-rows: 100px 100px 100px;
+    grid-gap:10px;
+}
+```
+
+# Grid Template Areas
+Podemos nombrar las celdas utilizando `grid-template-areas`y asignando un nombre a cada una.
+
+```css
+.container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,100px);
+    grid-gap:10px;
+    grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "footer footer footer";
+}
+
+.item-1{
+    grid-area: header;
+}
+.item-2{
+    grid-area: main;
+}
+.item-3{
+    grid-area: sidebar;
+}
+.item-4{
+    grid-area: footer;
+}
+```
+
+podemos utilizar `justify-items`y `align-items`para alinear los elementos dentro de la celdas.sus opciones posibles son :star,end,center,strech y baseline.Por defecto se aplica strech.
+
+```css
+.container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,100px);
+    grid-gap:10px;
+    justify-items:start;
+    align-items:end;
+}
+```
+
+podemos decirle a un item especifico que se alinee de manera diferene utilizando `justify-self` y `align-self`.sus opciones son :start,end,center,strech y baseline.
+
+```css
+.item-1{
+    justify-self:center;
+    align-self:stretch;
+}
+```
+
+podemos alinear nuestro grid en base a su contenedor utilizando `justify-content`y `align-content`.sus opciones son: star,end,center,strech,space-around,space-between y space-evenly.
+
+```css
+.container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,100px);
+    grid-gap:10px;
+    justify-content:center;
+    align-content:center;
+}
+```
+podemos crear un grid responsive con el uso de `auto-fit`.esto nos permite que elementos se ajusten al tamaño del contenedor.
+
+```css
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    grid-template-rows: repeat(4,1fr);
+    grid-gap:10px;
+}
+```
