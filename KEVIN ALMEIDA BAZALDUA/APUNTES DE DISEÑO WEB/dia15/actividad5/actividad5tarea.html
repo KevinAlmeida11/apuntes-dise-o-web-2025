@@ -24,7 +24,7 @@
         }
 
         .header__logo {
-            width: 300;
+            width: 300px;
             height: 200px;
             object-fit: cover;
             /* Recorta la imagen manteniendo la proporción */
@@ -48,30 +48,12 @@
             color: green;
         }
 
-        .content {
-            display: flex;
-            flex-direction: column;
-
-            width: 669px;
-            background-color: white;
-        }
 
         .grid__container {
             display: grid;
-            grid-template-rows: repeat(6, 1fr);
+            grid-template-rows: repeat(5, 1fr);
             grid-template-columns: repeat(6, 1fr);
             gap: 10px;
-
-            width: min(100vw, 1200px);
-            /* Ocupa todo el ancho, pero no excede 1200px */
-            height: min(100vh, 800px);
-            /* Ocupa toda la altura, pero no excede 800px */
-
-            margin: auto;
-            /* Centra el grid */
-            background-color: lightgray;
-
-
         }
 
         .grid__container img {
@@ -233,16 +215,45 @@
             text-align: center;
 
         }
-        .footer{
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Centra los elementos */
+            width: 100%;
             background-color: white;
-            
+            padding: 20px 0;
+        }
+
+        .footer img {
+            height: 80px;
+            /* Ajusta el tamaño del logo según necesites */
+            object-fit: contain;
+        }
+
+        .lorem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .footer__items {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
     <header class="header">
-        <div class="header__logo"><img src="" alt="logo-header"></div>
+        <div class="header__logo"><img src="./img/Logo-dark.png" alt="logo-header"></div>
         <div class="header__nav">
             <div class="nav__item nav__item--main">MAIN</div>
             <div class="nav__item">ABOUT</div>
@@ -274,19 +285,17 @@
             <div class="item19"><img src="./img/Masonry-list-img-18-500x500.jpg" alt="imagen19"></div>
             <div class="item20"><img src="./img/Masonry-list-img-21-500x500.jpg" alt="imagen20"></div>
             <div class="item21"><img src="./img/Masonry-list-img-20-500x500.jpg" alt="imagen21"></div>
-            <div class="item22">
-                <img src="./img/Logo-dark.png" alt="imagen-footer">
-                <div class="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                    <p>Doloremque recusandae fuga labore asperiores</p>
-                    <p>molestias! Illum ipsam incidunt laboriosam</p>
-                </div>
-            </div>
-
         </div>
     </main>
 
     <footer class="footer">
+        <img src="./img/Footer-logo.png" alt="logo-footer">
+        <div class="lorem">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <p>Doloremque recusandae fuga labore asperiores</p>
+            <p>molestias! Illum ipsam incidunt laboriosam</p>
+        </div>
+
         <div class="footer__items">
             <p>2021</p>
             <a href="https://qodeinteractive.com/">Qode Interactive</a>
