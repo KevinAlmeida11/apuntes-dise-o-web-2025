@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad6</title>
+    <link rel="stylesheet" href="./css/dw-party.css">
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header">
+            <h2 class="header__title">Header</h2>
+            <button class="header__btn">Menú</button>
+        </header>
+
+        <aside class="sidebar">
+
+            <h2 class="sidebar__title">sidebar</h2>
+
+        </aside>
+        <main class="contenido">
+           
+                <section class="Hero">
+                    <h2>Web Party Dw</h2>
+                    <img src="#" alt="imagen-centrada">
+                </section>
+
+                <section class="container">
+
+                </section>
+
+                <section class="galeria">
+
+                </section>
+        </main>
+        <footer class="footer">
+            <h2 class="footer__title">footer</h2>
+            <button id="btn-modo-oscuro">Modo oscuro</button>
+        </footer>
+    </div>
+
+
+    <script>
+        //-------------------------------------------------------
+        //paso1:obtener elemntos de nuestro DOM(documento HTML)
+        //-------------------------------------------------------
+        const miBoton = document.querySelector("#btn-modo-oscuro");
+        const body = document.querySelector("body");
+        const sidebar=document.querySelector("sidebar")
+        
+        //-------------------------------------------------------
+        //crear nuestras funciones
+        //-------------------------------------------------------
+        function cambiarAModoOscuro() {//funnction es para crear una nueva funcion,que se va a ejecutar cada vez que le diga.
+            //body.classList.add("darkMode")
+
+            console.log("Me hicieron Click"); //console log era para imprmir en el inspeccionador de elementos
+            console.log("mi boton es");
+            console.log(miBoton);
+            body.classList.toggle("darkMode");
+        }
+        //----------------------------------------------------------
+        //agregar escucha de click a miBotn y llamra la funcion cada vez qeue lo apretan
+        //----------------------------------------------------------
+
+        miBoton.addEventListener("click", cambiarAModoOscuro);
+        //paso 3:ejecutar nuestro código.
+        //cambiarAModoOscuro();
+        console.log("mi pagina esta funcionando");
+
+        //podemos agregar HTML dentro de nuestro contenedor
+        sidebar.innerHTML="<h1>holaaa,estoy dentro de Sidebar</h1>";
+
+    </script>
+</body>
+
+</html>

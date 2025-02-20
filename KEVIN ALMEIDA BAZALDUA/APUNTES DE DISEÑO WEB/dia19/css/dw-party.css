@@ -1,0 +1,61 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 1fr 100px ;
+    grid-gap: 10px;
+    grid-template-areas:
+        "header header header"
+        "sidebar contenido contenido"
+        "footer footer footer";
+    height: 100vh;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    background-color: aquamarine;
+    width: 100vw;
+    padding: 10px;
+
+}
+
+.header__title {}
+
+.header__btn {}
+
+.sidebar {
+    display: flex;
+    grid-area: sidebar;
+    background-color: brown;
+}
+
+.contenido {
+    display: flex;
+    grid-area: contenido;
+    background-color: chocolate;
+
+}
+
+.footer {
+    grid-area: footer;
+    background-color: cornflowerblue;
+  
+    padding: 10px;
+}
+
+.darkMode {
+    background-color: black;
+    color: white;
+}
