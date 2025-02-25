@@ -43,10 +43,33 @@
 
 .contenido {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-area: contenido;
     background-color: chocolate;
 
 }
+.Hero{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+
+}
+.container{
+    display: flex;
+    background-color: red;
+    width: 100%;
+    justify-content: center;
+    height: 50px;
+   
+}
+
+.container__text{
+    background-color: lightskyblue;
+}
+
+
 
 .footer {
     grid-area: footer;
