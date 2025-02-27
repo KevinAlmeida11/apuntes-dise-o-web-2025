@@ -33,7 +33,7 @@ Perro:
 const alumno = { 
     nombre: "Lucía Perez",
     edad:35,
-   // hoobies:["futbol","Programar","leer","jugar a pokemon"]
+   hoobies:["futbol","Programar","leer","jugar a pokemon"],
     saludar : funtion() {
         console.log ("Hola,mi nombre es Lucía");
 
@@ -90,7 +90,7 @@ let texto= `Quiero comillas 'simples' y "dobles"` ;//template string (plantilla)
 let numero=123;
 let numero2="123";//"123"
 numero2= Number(numero2);//123
-numero2= Number(numero2);//
+numero2= Number("123");//123
 
 let entero =25; //numero entero
 let decimal=22.30; // numero decimal
@@ -116,6 +116,8 @@ const alumno = {
     },
     irseDeVacaciones: function(){...}
 }
+
+//como leer un objeto
 alumno.edad; //33
 alumno.presentarProyecto();//presenta el proyecto
 
@@ -190,14 +192,51 @@ persona.edad=30;
 console.log(persona);
 
 
+
+
+
+
 //Ejercicio 3: Arrays de objetos
 
-- Crea un array llamado estudiantes que contenga tres objetos, cada uno representando a un estudiante con - las propiedades nombre y nota.
-- Imprime en la consola el nombre del segundo estudiante.
-- Cambia la nota del primer estudiante a 95.
-- Utiliza un bucle for para imprimir el nombre y la nota de cada estudiante en la consola.
-  
-Ejercicio 4: Métodos en objetos
+//- Crea un array llamado estudiantes que contenga tres objetos, cada uno representando a un estudiante con - las propiedades `nombre`y `nota`.
+const listaEstudiante=[
+    { nombre:"juan",nota:10},
+    {nombre:"María",nota:9},
+    {nombre:"Lucas",nota:4}
+];
 
-- Crea un objeto llamado calculadora con las propiedades a y b (números) y un método sumar que retorne la suma de a y b.
-- Asigna valores a a y b y llama al método sumar, imprimiendo el resultado en la consola.
+//- Imprime en la consola el nombre del segundo estudiante.
+
+console.log(listaEstudiantes[1]);
+console.log(listaEstudiantes[1].nombre); 
+
+// - Cambia la nota del primer estudiante a 95.
+listaEstudiante[0].nota=95
+console.log(listaEstudiantes)
+
+// - Utiliza un bucle for para imprimir el nombre y la nota de cada estudiante en la consola.
+
+for( let i=0;i<10; )
+  
+
+
+// Ejercicio 4: Métodos en objetos
+
+// - Crea un objeto llamado calculadora con las propiedades a y b (números) y un método sumar que retorne la suma de a y b.
+const calculadora={
+    a:5,
+    b:3,
+    sumar:funtion(){
+        comsole.log(this.a + this.b)
+    }
+}
+
+
+console.log(calculadora.a); 5
+console.log(calculadora.b);3
+calculadora.sumar();
+
+calculadora.a=15;
+calculadora.b=30;
+calculadora.sumar(); // 45
+// - Asigna valores a a y b y llama al método sumar, imprimiendo el resultado en la consola.
