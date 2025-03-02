@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Bienvenidos JavaScript</h1>
     <button id="sum1">suma1</button>
@@ -14,24 +16,58 @@
     <p id="resultado">0</p>
 
     <script>
-         const suma=document.querySelector("#sum1");
-         const resta=document.querySelector("#rest1");
-         const multiplica=document.querySelector("#multip5");
-
-         const container=document.querySelector("#resultado");
-
-         sumar.addEventListener("click",sumar1);
-         sumar.addEventListener("click",rest1);
-         sumar.addEventListener("click",multip5);
-
-         const resultado=0;
-         
-         function sumar1(){
-            resultado= resultado+1;
-            container.textContent=resultado;
-         
-        };
+        const suma = document.querySelector("#sum1");
+        suma.addEventListener("click", sumar);
         
+
+        const resta = document.querySelector("#rest1");
+        resta.addEventListener("click", restar);
+       
+
+
+        const multiplica = document.querySelector("#multip5");
+        multiplica.addEventListener("click", multiplicar);
+       
+
+        const container = document.querySelector("#resultado");
+        
+
+
+        let resultado = 0;
+
+        function sumar() {
+            resultado = resultado + 1;
+           // container.textContent = resultado;
+           // alert(resultado);
+           // console.log(resultado); lo simplificamos creando una funcion nueva para no repetir mucho el codigo.
+           imprimir()
+        };
+
+
+        function restar() {
+            resultado = resultado - 1;
+            //container.textContent = resultado;
+            //alert(resultado);
+            //console.log(resultado);
+            imprimir()
+        };
+
+        function multiplicar() {
+            resultado = resultado * 5;
+              //container.textContent = resultado;
+            //alert(resultado);
+            //console.log(resultado);
+            imprimir()
+           
+        };
+
+        function imprimir(){
+            container.textContent = resultado;
+            alert(resultado);
+            console.log(resultado);
+        }
+
     </script>
 </body>
+
 </html>

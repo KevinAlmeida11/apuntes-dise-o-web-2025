@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="inputEdad" placeholder="ingresa tu edad">
+
+    <button id="btn">Entrar</button>
+
+    <div id="content">
+        ....
+    </div>
+
+
+
+
+    <br>
+    <br>
+    convertir este input,en un input para recibir numeros.que el usuario ingrese su edad.y que al hacer click en un
+    boton de "entrar" me diga si soy mayor o menor de edad.
+    ayuda:
+    en JS 'elemento.value' devuelve el valor que tenga el input
+    <script>
+
+        //const boton=document.querySelector("#btn");
+        //const container=document.querySelector("#content");
+        //boton.addEventListener("click",saludar);
+
+        //hacer un programa que al hacer click en el boton
+        //escriba algo en #content
+
+        //function saludar(){
+        //alert("Hola!");
+        //container.textContent="Soy el texto nuevo agregado con JS ";
+        // }
+
+
+        
+
+
+
+        const registro = document.querySelector("#btn")
+        registro.addEventListener("click", entrar)
+
+        const mensaje = document.querySelector("#content")//si lo borro igual funciona.
+
+
+
+        function entrar() {
+            let edad = (inputEdad.value)
+
+            if (edad >= 18) {
+                content.textContent = "Es mayor de Edad";
+                content.style.color = "blue"
+                alert("Es mayor de Edad");
+                console.log(edad);
+            } else {
+                content.textContent = "Es menor de Edad";
+                content.style.color = "red"
+                alert("Es menor de Edad");
+                console.log(edad);
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
