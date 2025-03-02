@@ -10,7 +10,7 @@ Imprime cada variable en la consola usando console.log.
 ```js
 let edad=29;
 let texto="holaaaa";
-let haceejercicio= false;
+let haceEjercicio= false;
 
 console.log(edad);
 console.log(texto);
