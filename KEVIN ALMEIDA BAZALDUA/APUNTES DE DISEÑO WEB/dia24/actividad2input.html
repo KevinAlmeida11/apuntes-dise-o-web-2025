@@ -46,22 +46,24 @@
 
         const registro = document.querySelector("#btn")
         registro.addEventListener("click", entrar)
+        
+        const input=document.querySelector("#inputEdad")
 
-        const mensaje = document.querySelector("#content")//si lo borro igual funciona.
+        const mensaje = document.querySelector("#content")
 
 
 
         function entrar() {
-            let edad = (inputEdad.value)
+            let edad = input.value
 
             if (edad >= 18) {
-                content.textContent = "Es mayor de Edad";
-                content.style.color = "blue"
+                mensaje.textContent = "Es mayor de Edad";
+                mensaje.style.color = "blue"
                 alert("Es mayor de Edad");
                 console.log(edad);
             } else {
-                content.textContent = "Es menor de Edad";
-                content.style.color = "red"
+                mensaje.textContent = "Es menor de Edad";
+                mensaje.style.color = "red"
                 alert("Es menor de Edad");
                 console.log(edad);
             }

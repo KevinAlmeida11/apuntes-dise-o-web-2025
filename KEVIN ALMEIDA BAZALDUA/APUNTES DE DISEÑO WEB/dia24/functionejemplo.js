@@ -107,3 +107,4 @@ function sumar (num1,num2){
 const resultado=sumar(5,3);
 console.log(resultado); 8
 console.log(sumar(5,3)); 8
+

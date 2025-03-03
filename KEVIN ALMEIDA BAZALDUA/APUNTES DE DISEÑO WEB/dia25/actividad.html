@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad</title>
+</head>
+
+<body>
+
+    <h3>Cantidad de clicks</h3>
+
+    <input type="number" id="operacion" placeholder="0">
+
+    <button id="num1">1</button>
+    <button id="num2">2</buttonid>
+        <button id="num3">3</button>
+        <button id="num4">4</button>
+        <button id="num5">5</button>
+        <button id="num6">6</button>
+        <button id="num7">7</button>
+        <button id="num8">8</button>
+        <button id="num9">9</button>
+        <button id="num0">0</button>
+
+        <button id="btnSuma">+</button>
+        <button id="btnResta">-</button>
+        <button id="btnMulti">x</button>
+        <button id="btnDivi">/</button>
+        <button id="btnIgual">=</button>
+
+        <div id="resultado">0</div>
+
+
+
+
+
+
+
+
+        <script>
+            // ----------------------------------------------------------
+            // 1. Declaramos Variables y obtenemos nuestros tags del DOM
+            // ----------------------------------------------------------
+
+            const miBotonSuma = document.querySelector("#btnSuma");
+            miBotonSuma.addEventListener("click", sumar);
+
+            const miBotonResta = document.querySelector("#btnResta");
+            miBotonResta.addEventListener("click", restar);
+
+            const miBotonMultiplica = document.querySelector("#btnMulti");
+            miBotonMultiplica.addEventListener("click", multiplicar);
+
+            const miBotonDivide = document.querySelector("#btnDivi");
+            miBotonDivide.addEventListener("click", dividir);
+
+            const miBotonIgual = document.querySelector("#btnIgual");
+            miBotonIgual.addEventListener("click", total);
+
+            const inputOpera = document.querySelector("#operacion");
+
+            const resultadoTotal = document.querySelector("#resultado");
+
+            let numeroInicial=inputOpera.value
+
+            //FUNCIONES
+//const numeroNuevo=5;
+//let num=3;
+//num=numeroNuevo+num*10
+
+            function sumar() {
+                
+            }
+
+            function entrar() {
+                let edad = input.value
+
+                if (edad >= 18) {
+                    mensaje.textContent = "Es mayor de Edad";
+                    mensaje.style.color = "blue"
+                    alert("Es mayor de Edad");
+                    console.log(edad);
+                } else {
+                    mensaje.textContent = "Es menor de Edad";
+                    mensaje.style.color = "red"
+                    alert("Es menor de Edad");
+                    console.log(edad);
+                }
+
+            }
+
+
+
+
+            // creamos una función que imprime en pantalla un resultado
+            function ImprimirEnPantalla(dato) {
+                console.log(dato);
+                divResultado.innerText += " - " + dato;
+            }
+            let numero = 2;
+            //divResultado.innerText= numero;
+            ImprimirEnPantalla("Haz click en los botones");
+            ImprimirEnPantalla(numero);
+        </script>
+</body>
+
+</html>

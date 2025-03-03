@@ -126,6 +126,15 @@ console.log("numero",i);
 
 ```
 
+
+```js
+
+for(let i=0;i<=10;i=i+2){
+    console.log("numero",i+2);
+}
+```
+
+
 ```js
 //numeros de 10 al 1
 for(let i=10; i>0; i--){
@@ -133,6 +142,28 @@ for(let i=10; i>0; i--){
 }
 
 ```
+
+
+```js
+//ejemplo de uso de While
+//Bucle usasndo mientras(while) en vez de for
+
+i==,
+while(i<10){
+    //inicio del bucle
+    console.log(i);
+    //fin del bucle
+    i++;
+}
+
+
+//bucle Do-While
+//Funciona igual que el while,pero se ejecuta al menos una vez
+
+i=10
+
+do
+
 ## funciones
 
 seccion de codigo reutilizable.
@@ -156,3 +187,4 @@ saludar();
 for(i=0 ; i<2; i++){
     saludar();
 }
+
