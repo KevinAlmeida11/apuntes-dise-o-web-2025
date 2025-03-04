@@ -50,8 +50,13 @@ const sumar=(num1,num2)=>{
 }
 
 //funcion flecha reducida
-//solo se puede utilizar  y sirve si mi funcion es de una sola linea.
+//solo se puede utilizar  y sirve si mi funcion es de 1 sola linea.
+//y esa linea es la de return...
+
+
+//quitar llaves y quitar return
 const sumar=(num1,num2)=>num1+num2;
+
 
 
 
@@ -67,8 +72,8 @@ const alumno={
 alumno.sumar(3+1);
 
 miBoton.addEventLustener("click",()=>{
-    console.log(")
-})
+    console.log("me hicieron click");
+});
 ```
 
 ## Truthy/Falsy

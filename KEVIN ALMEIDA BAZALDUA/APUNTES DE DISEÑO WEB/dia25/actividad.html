@@ -11,41 +11,36 @@
 <body>
     <div class="calculadora">
         <div class="pantalla">
-            <input type="text" id="operacion" placeholder="0" disabled>
+            <input type="text" id="inputOperacion" placeholder="0" disabled>
             <div id="resultado">0</div>
         </div>
 
         <div class="botones">
-            <button class="funcion" onclick="clearDisplay()">AC</button>
-            <button class="funcion" onclick="invertSign()">+/-</button>
-            <button class="funcion" onclick="appendToDisplay('%')">%</button>
-            <button class="operador" onclick="appendToDisplay('/')">÷</button>
+            <button id="funcion" onclick="clearDisplay()">AC</button>
+            <button id="funcion" onclick="invertSign()">+/-</button>
+            <button id="funcion" onclick="appendToDisplay('%')">%</button>
+            <button id="operador" onclick="appendToDisplay('/')">÷</button>
 
-            <button class="numero" onclick="appendToDisplay('7')">7</button>
-            <button class="numero" onclick="appendToDisplay('8')">8</button>
-            <button class="numero" onclick="appendToDisplay('9')">9</button>
-            <button class="operador" onclick="appendToDisplay('*')">×</button>
+            <button id="numero" onclick="appendToDisplay('7')">7</button>
+            <button id="numero" onclick="appendToDisplay('8')">8</button>
+            <button id="numero" onclick="appendToDisplay('9')">9</button>
+            <button id="operador" onclick="appendToDisplay('*')">×</button>
 
-            <button class="numero" onclick="appendToDisplay('4')">4</button>
-            <button class="numero" onclick="appendToDisplay('5')">5</button>
-            <button class="numero" onclick="appendToDisplay('6')">6</button>
-            <button class="operador" onclick="appendToDisplay('-')">−</button>
+            <button id="numero" onclick="appendToDisplay('4')">4</button>
+            <button id="numero" onclick="appendToDisplay('5')">5</button>
+            <button id="numero" onclick="appendToDisplay('6')">6</button>
+            <button id="operador" onclick="appendToDisplay('-')">−</button>
 
-            <button class="numero" onclick="appendToDisplay('1')">1</button>
-            <button class="numero" onclick="appendToDisplay('2')">2</button>
-            <button class="numero" onclick="appendToDisplay('3')">3</button>
-            <button class="operador" onclick="appendToDisplay('+')">+</button>
+            <button id="numero" onclick="appendToDisplay('1')">1</button>
+            <button id="numero" onclick="appendToDisplay('2')">2</button>
+            <button id="numero" onclick="appendToDisplay('3')">3</button>
+            <button id="operadorSuma" onclick="appendToDisplay('+')">+</button>
 
-            <button class="cero" onclick="appendToDisplay('0')">0</button>
-            <button class="numero" onclick="appendToDisplay('.')">.</button>
-            <button class="operador igual" onclick="calculate()">=</button>
+            <button id="cero" onclick="appendToDisplay('0')">0</button>
+            <button id="numero" onclick="appendToDisplay('.')">.</button>
+            <button id="operador igual" onclick="calculate()">=</button>
         </div>
     </div>
-
-
-
-
-
 
 
 
@@ -54,8 +49,8 @@
         // 1. Declaramos Variables y obtenemos nuestros tags del DOM
         // ----------------------------------------------------------
 
-        //const miBotonSuma = document.querySelector("#btnSuma");
-        //miBotonSuma.addEventListener("click", sumar);
+        const miBotonSuma = document.querySelector("#btnSuma");
+        miBotonSuma.addEventListener("click", sumar);
 
        // const miBotonResta = document.querySelector("#btnResta");
         //miBotonResta.addEventListener("click", restar);
@@ -86,7 +81,7 @@
 
 // Agrega número u operador a la pantalla
 function appendToDisplay(value) {
-    let operacion = document.getElementById("operacion");
+    let operacion = document.getElementById("inputOperacion");
     if (operacion.value === "0") {
         operacion.value = value;
     } else {
@@ -96,13 +91,13 @@ function appendToDisplay(value) {
 
 // Borra la pantalla
 function clearDisplay() {
-    document.getElementById("operacion").value = "";
+    document.getElementById("inputOperacion").value = "";
     document.getElementById("resultado").innerText = "0";
 }
 
 // Cambia el signo del número
 function invertSign() {
-    let operacion = document.getElementById("operacion");
+    let operacion = document.getElementById("inputOperacion");
     if (operacion.value) {
         operacion.value = operacion.value.startsWith("-") ?
             operacion.value.substring(1) :
@@ -113,7 +108,7 @@ function invertSign() {
 // Calcula el resultado de la operación
 function calculate() {
     try {
-        let resultado = eval(document.getElementById("operacion").value);
+        let resultado = eval(document.getElementById("inputOperacion").value);
         document.getElementById("resultado").innerText = resultado;
     } catch {
         document.getElementById("resultado").innerText = "Error";

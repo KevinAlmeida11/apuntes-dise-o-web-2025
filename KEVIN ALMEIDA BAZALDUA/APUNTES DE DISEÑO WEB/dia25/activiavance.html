@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora iPhone</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+
+<body>
+    <div class="calculadora">
+        <div class="pantalla">
+            <input type="text" id="inputOperacion" placeholder="0" disabled>
+            <div id="resultado">0</div>
+        </div>
+
+        <div class="botones">
+            <button id="funcion" onclick="clearDisplay()">AC</button>
+            <button id="funcion" onclick="invertSign()">+/-</button>
+            <button id="funcion" onclick="appendToDisplay('%')">%</button>
+            
+            <button id="btnDivi" onclick="appendToDisplay('/')">÷</button>
+
+            <button id="numero" onclick="appendToDisplay('7')">7</button>
+            <button id="numero" onclick="appendToDisplay('8')">8</button>
+            <button id="numero" onclick="appendToDisplay('9')">9</button>
+            <button id="btnMulti" onclick="appendToDisplay('*')">×</button>
+
+            <button id="numero" onclick="appendToDisplay('4')">4</button>
+            <button id="numero" onclick="appendToDisplay('5')">5</button>
+            <button id="numero" onclick="appendToDisplay('6')">6</button>
+            <button id="btnRest" onclick="appendToDisplay('-')">−</button>
+
+            <button id="numero" onclick="appendToDisplay('1')">1</button>
+            <button id="numero" onclick="appendToDisplay('2')">2</button>
+            <button id="numero" onclick="appendToDisplay('3')">3</button>
+            <button id="btnSuma" onclick="appendToDisplay('+')">+</button>
+
+            <button id="cero" onclick="appendToDisplay('0')">0</button>
+            <button id="numero" onclick="appendToDisplay('.')">.</button>
+            <button id="btnIgual" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        // ----------------------------------------------------------
+        // 1. Declaramos Variables y obtenemos nuestros tags del DOM
+        // ----------------------------------------------------------
+
+        const miBotonSuma = document.querySelector("#btnSuma");
+        miBotonSuma.addEventListener("click", sumar);
+
+        const miBotonResta = document.querySelector("#btnResta");
+        miBotonResta.addEventListener("click", restar);
+
+        const miBotonMultiplica = document.querySelector("#btnMulti");
+        miBotonMultiplica.addEventListener("click", multiplicar);
+
+        const miBotonDivide = document.querySelector("#btnDivi");
+        miBotonDivide.addEventListener("click", dividir);
+
+        const miBotonIgual = document.querySelector("#btnIgual");
+        miBotonIgual.addEventListener("click", total);
+
+        const dato=document.querySelector("#")
+
+        const inputOpera = document.querySelector("#operacion");
+
+        const resultadoTotal = document.querySelector("#resultado");
+
+        let numeroInicial = inputOpera.value
+
+        //FUNCIONES
+        function sumar(){
+            numeroInicial=numeroInical+numnuevo
+
+        }
+        //const numeroNuevo=5;
+        //let num=3;
+        //num=numeroNuevo+num*10
+
+        /* Estilos generales */
+
+
+
+
+
+        // Agrega número u operador a la pantalla
+        function appendToDisplay(value) {
+            
+            if (inputOpera.value === "0") {
+                inputOpera.value = value;
+            } else {
+                inputOpera.value += value;
+                console.log(inputOpera.value);
+
+            }
+        }
+
+        // Borra la pantalla
+        function clearDisplay() {
+            inpu.value = "";
+            resultadoTotal.innerText = "0";
+        }
+
+        // Cambia el signo del número
+        function invertSign() {
+            
+            if (inputOpera.value) {
+                inputOpera.value = inputOpera.value.startsWith("-") ?
+                    inputOpera.value.substring(1) :
+                    "-" + inputOpera.value;
+            }
+        }
+
+        // Calcula el resultado de la operación
+        function calculate() {
+            try {
+                let resultado = eval(document.getElementById("inputOperacion").value);
+                document.getElementById("resultado").innerText = resultado;
+            } catch {
+                document.getElementById("resultado").innerText = "Error";
+            }
+        }
+
+
+        //function sumar() {
+        //   numeroInicial=
+        //  }
+        //
+        // function entrar() {
+        //  let edad = input.value
+
+        //  if (edad >= 18) {
+        //  mensaje.textContent = "Es mayor de Edad";
+        //   mensaje.style.color = "blue"
+        //   alert("Es mayor de Edad");
+        //  console.log(edad);
+        //  } else {
+        //   //  mensaje.textContent = "Es menor de Edad";
+        //   mensaje.style.color = "red"
+        //  alert("Es menor de Edad");
+        //  console.log(edad);
+        // }//
+        //
+        // }
+
+
+
+
+        // creamos una función que imprime en pantalla un resultado
+        // function ImprimirEnPantalla(dato) {
+        //   console.log(dato);
+        //  divResultado.innerText += " - " + dato;
+        // }
+        // let numero = 2;
+        //divResultado.innerText= numero;
+        //ImprimirEnPantalla("Haz click en los botones");
+        //(ImprimirEnPantalla(numero);
+    </script>
+</body>
+
+</html>
