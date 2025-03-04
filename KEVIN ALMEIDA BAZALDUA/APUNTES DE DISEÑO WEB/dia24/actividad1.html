@@ -16,57 +16,91 @@
     <p id="resultado">0</p>
 
     <script>
-        const suma = document.querySelector("#sum1");
-        suma.addEventListener("click", sumar);
+       // const suma = document.querySelector("#sum1");
+        //suma.addEventListener("click", sumar);
         
 
-        const resta = document.querySelector("#rest1");
-        resta.addEventListener("click", restar);
+       // const resta = document.querySelector("#rest1");
+       // resta.addEventListener("click", restar);
        
 
 
-        const multiplica = document.querySelector("#multip5");
-        multiplica.addEventListener("click", multiplicar);
+        //const multiplica = document.querySelector("#multip5");
+       // multiplica.addEventListener("click", multiplicar);
        
 
-        const container = document.querySelector("#resultado");
+      //  const container = document.querySelector("#resultado");
         
 
 
-        let resultado = 0;
+       // let resultado = 0;
 
-        function sumar() {
-            resultado = resultado + 1;
+       // function sumar() {
+         //   resultado = resultado + 1;
            // container.textContent = resultado;
            // alert(resultado);
            // console.log(resultado); lo simplificamos creando una funcion nueva para no repetir mucho el codigo.
-           imprimir()
-        };
+          // imprimir()
+       // };
 
 
-        function restar() {
-            resultado = resultado - 1;
+       // function restar() {
+         //   resultado = resultado - 1;
             //container.textContent = resultado;
             //alert(resultado);
             //console.log(resultado);
-            imprimir()
-        };
+           // imprimir()
+        //};
 
-        function multiplicar() {
-            resultado = resultado * 5;
+        //function multiplicar() {
+          //  resultado = resultado * 5;
               //container.textContent = resultado;
             //alert(resultado);
             //console.log(resultado);
-            imprimir()
+            //imprimir()
            
-        };
+       // };
 
-        function imprimir(){
-            container.textContent = resultado;
-            alert(resultado);
-            console.log(resultado);
-        }
+        //function imprimir(){
+            //container.textContent = resultado;
+            //alert(resultado);
+            //console.log(resultado);
+        //}
 
+        function appendToDisplay(value) {
+    let operacion = document.getElementById("operacion");
+    if (operacion.value === "0") {
+        operacion.value = value;
+    } else {
+        operacion.value += value;
+    }
+}
+
+// Borra la pantalla
+function clearDisplay() {
+    document.getElementById("operacion").value = "";
+    document.getElementById("resultado").innerText = "0";
+}
+
+// Cambia el signo del número
+function invertSign() {
+    let operacion = document.getElementById("operacion");
+    if (operacion.value) {
+        operacion.value = operacion.value.startsWith("-") ?
+            operacion.value.substring(1) :
+            "-" + operacion.value;
+    }
+}
+
+// Calcula el resultado de la operación
+function calculate() {
+    try {
+        let resultado = eval(document.getElementById("operacion").value);
+        document.getElementById("resultado").innerText = resultado;
+    } catch {
+        document.getElementById("resultado").innerText = "Error";
+    }
+}
     </script>
 </body>
 
