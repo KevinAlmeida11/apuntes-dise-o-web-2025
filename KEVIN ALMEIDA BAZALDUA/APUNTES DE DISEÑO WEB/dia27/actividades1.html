@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">manipulacion de textos</h1>
+    <div id="textoMayuscula">...</div>
+
+    
+    <script>
+
+const titulo=document.querySelector("#titulo")
+const upperCase=document.querySelector("#textoMayuscula")
+
+upperCase.textContent=titulo.textContent.toUpperCase();//consultar si es con innertext o con textcontent
+
+    </script>
+</body>
+</html>

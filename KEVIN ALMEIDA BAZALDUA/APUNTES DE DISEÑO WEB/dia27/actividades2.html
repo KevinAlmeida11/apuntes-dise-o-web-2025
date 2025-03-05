@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="nombreCompleto">Juan Pérez</p>
+
+    <span id="Iniciales"></span>
+    <script>
+const nombreCompleto=document.querySelector("#nombreCompleto").innerText;
+let nombreLista=nombreCompleto.split(" ");
+
+let nombre=nombreLista.split("Pérez");
+
+let apellido=nombreLista.split("Juan");
+let nombreInicial=nombre.slice(0,1);
+
+let apellidoInicial=apellido.slice(0,1);
+
+
+
+
+
+
+    </script>
+</body>
+</html>
