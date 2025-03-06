@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.hl{
+    color: red;
+}
+    </style>
+</head>
+
+<body>
+    <input type="text" id="inputText" placeholder="ingresa tu texto">
+    <button id="btnRevisar">Revisar texto</button>
+    <div id="resultado">
+
+    </div>
+    <script>
+
+        //1.Declaro variables    
+        const input = document.querySelector("#inputText");
+        const boton = document.querySelector("#btnRevisar");
+        const result = document.querySelector("#resultado");
+        const marca = "CEI";
+        const nuevaMarca=`<span class='hl'>${marca}</span>`;
+
+        //2.funciones
+        //click va al boton y el keyup va al input.
+        input.addEventListener("keyup", () => {
+            const inputText = input.value;
+            //v1:usar replaceALL para cambiar nuestro texto
+            result.innerHTML = inputText.replaceAll(marca, nuevaMarca);
+
+             //v2:replace + regex para cambiar nuestro texto
+             //RegExp g->global
+             //RegExp i->ignorar mayusculas-minusculas
+             //const marcaRegex=new RegExp(marca,'gi');
+             //result.innerHTML = inputText.replace(marcaRegex, nuevaMarca)
+        })
+
+        //3.iniciar nuestro codigo
+
+
+
+    </script>
+</body>
+
+</html>
