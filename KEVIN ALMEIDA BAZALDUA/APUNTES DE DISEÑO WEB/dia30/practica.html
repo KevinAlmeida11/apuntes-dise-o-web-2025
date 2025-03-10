@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moneda</title>
+</head>
+<body>
+    <button id="moneda">lanzar Moneda</button>
+    <div id="resultado"></div>
+    <script>
+        const btnMoneda=document.querySelector("#moneda");
+        const resultadoMoneda=document.querySelector("#resultado")
+        
+        btnMoneda.addEventListener("click",()=>{
+
+            const monedaAleatorio = Math.random();
+
+            if (monedaAleatorio>= 0.5) {
+                 resultadoMoneda.innerText="Cara";
+            } else {
+                resultadoMoneda.innerText="sello";
+
+            }
+            console.log(monedaAleatorio);
+        });
+
+        //
+    </script>
+</body>
+</html>
