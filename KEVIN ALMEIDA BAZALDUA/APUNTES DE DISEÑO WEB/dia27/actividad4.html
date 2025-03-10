@@ -29,10 +29,10 @@
 
             //procesamos
             for (i = 0; i < palabrasOfensivas.length; i++) {
-                const palabra = palabrasOfensivas[i];
-                const censura = "***";
+                const insulto = palabrasOfensivas[i];
+                const censura = "*".repeat(insulto.lenght);
                
-                texto=texto.replaceAll(palabra, censura);
+                texto=texto.replaceAll(insulto, censura);
             }
             //imprimimos
             result.innerText = texto;
