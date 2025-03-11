@@ -10,7 +10,8 @@
 <body>
     <button id="btnPiedra">piedra</button>
     <button id="btnPapel">papel</button>
-    <button id="btnTijera">tijera</button>
+    <button id="btnTijera">tijeras</button>
+    <button id="btnAiVsAi">Auto Play!</button>
 
     <h3 id="txtResult"></h3>
 
@@ -25,14 +26,25 @@
         const btnPapel = document.querySelector("#btnPapel");
         const btnTijera = document.querySelector("#btnTijera");
 
-        //2.funciones y Eventlisteners
-        btnPiedra.addEventListener("click", () => { jugar("piedra"); });
-        btnPapel.addEventListener("click", () => { jugar("papel"); });
-        btnTijera.addEventListener("click", () => { jugar("tijera"); });
+        const divResultado = document.querySelector("#txtResultado");
+        const spanGanadas = document.querySelector("#txtGane");
+        const spanPerdidas = document.querySelector("#txtPerdi");
+        const spanEmpatadas = document.querySelector("#txtEmpate");
 
-        const cantGanaste=0;
-        const cantPerdiste=0;
-        const cantEmpataste=0;
+        const
+
+            //2.funciones y Eventlisteners
+            btnPiedra.addEventListener("click", () => { jugar("piedra"); });
+        btnPapel.addEventListener("click", () => { jugar("papel"); });
+        btnTijera.addEventListener("click", () => { jugar("tijeras"); });
+
+        btnAutoplay.addEventListener("click", () => {
+            jugar
+        })
+
+        const cantGanaste = 0;
+        const cantPerdiste = 0;
+        const cantEmpataste = 0;
 
 
         //funcion principal
@@ -40,24 +52,36 @@
             const juagadorIA = seleccionDeIA();//PIEDRA,PAPEL,TIJERA(AL AZAR)
             console.log(`yo tiré ${jugador}- la IA tiró ${juagadorIA}`);
 
-            const resultado = queJugadorgana(jugador, juagadorIA);
+            const resultado = queJugadorGana(jugador, juagadorIA);
 
             console.log(resultado)
 
             //actualizar variables de "cantGanaste,cantPerdiste,cantEmpataste"
 
-            if(resultado=="ganaste"){ cantGanaste++; }
-            if(resultado=="perdiste"){ cantPerdiste++; }
-            if(resultado=="empataste"){cantEmpataste++; }
+            if (resultado == "ganaste") { cantGanaste++; }
+            if (resultado == "perdiste") { cantPerdiste++; }
+            if (resultado == "empataste") { cantEmpataste++; }
 
 
             //el resto de su codigo
-            imprimirResultados();
+            imprimirResultados(resultado);
         }
+        function AIvAI() {
+            //set interval repite una funcion,multiples veces,dependiendo del timepo en el segundo parametro
 
+            setInterval(() => {
+            
+                //console.log("JUEGO AUTOMATICO")
+                const jugadorAI2=seleccionDeIA();
+                jugar(jugadorAI2);//simular que esta jugando el jugador 1
+
+            },1000);//  tiempo en milisegundo (1000=!segundo)
+
+        }
+        
         //que obtuvo el ordenador
         function seleccionDeIA() {
-            const opciones = ['piedra', 'papel', 'tijera'];
+            const opciones = ['piedra', 'papel', 'tijeras'];
             const num = Math.floor(Math.random() * opciones.lenght);
             //  alert (num);//0,1,2
             return opciones[num];
@@ -66,7 +90,7 @@
 
         //quien gano entre j1 y j2
 
-        function queJugadorgana(j1, j2) {
+        function queJugadorGana(j1, j2) {
             //caso de empate
             if (j1 === j2) { return "empataron"; }
 
@@ -85,7 +109,9 @@
 
         //imprimir resultados en pantalla
         function imprimirResultados() {
+            if (resultadoTxt == "ganaste") {
 
+            }
         }
 
     </script>
