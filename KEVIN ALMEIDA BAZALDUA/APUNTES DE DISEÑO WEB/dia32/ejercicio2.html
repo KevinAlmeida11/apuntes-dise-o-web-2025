@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMBIO DE COLOR</title>
+    <style>
+        .bloque {
+            width: 200px;
+            height: 200px;
+            background-color: lightsalmon;
+
+            /*display:flex;
+            justify-content: center;
+            align-items: center;*/
+        }
+
+        .msg {
+            color: white;
+            background-color: rgba(0, 0, 0, 0, 7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="bloque">
+        <span class="msg">Hola!</span>
+    </div>
+    <script>
+
+        const bloque = document.querySelector(".bloque");
+        const msg=document.querySelector(".msg");
+
+        bloque.addEventListener("mouseover",()=>{
+            msg.style.display="block";
+        });
+
+        bloque.addEventListener("mouseout",()=>{
+            msg.style.display="none";
+        });
+
+    </script>
+</body>
+
+</html>

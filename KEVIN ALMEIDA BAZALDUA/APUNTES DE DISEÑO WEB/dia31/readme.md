@@ -188,7 +188,25 @@ const libros=[
     {titulo:'Cien años de soledad',autor:'Gabriel Garcia Marquez'},
     {titulo:'La Odisea',autor:'Homero'},
 ];
-const EllibroBuscado=libros.find(libro=>libro.titulo=='La Odisea');
+
+const inputValue="El Odisea"
+;const EllibroBuscado=libros.find(libro=>libro.titulo==inputValue);
 ```
+
 3.b uSAR LOS METODOS DE STRING PARA BUSQUEDAS PARCIALES "cien años".
+
+
+```js
+
+
+const libroDeseado=libros.find(libro=>libro.titulo.toLowerCase().includes('cien años'));
+
+```
+
 4. Dado una lista de numeros desordenados,ordenar de menor a mayor(investigar)
+```js
+const numeros=[5,20,3,-10,5,25,100005];
+const ordenados=numeros.sort(function(a,b){return a-b;});
+const ordenados=numeros.sort((a,b)=>a-b);
+
+```

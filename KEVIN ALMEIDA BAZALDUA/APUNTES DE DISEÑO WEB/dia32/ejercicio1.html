@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMBIO DE COLOR</title>
+    <style>
+        .miBloque {
+            width: 200px;
+            height: 200px;
+            background-color: lightsalmon;
+
+            /*display:flex;
+            justify-content: center;
+            align-items: center;*/
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <button id="btnColor"></button>
+    <button id="btnRojo">Rojo</button>
+    <button id="btnAzul">Azul</button>
+
+    <div class="miBloque" id="bloque">bloque</div>
+    
+    <script>
+        const btnColor = document.querySelector("#btnColor")
+        const btnrojo = document.querySelector("#btnrojo");
+        const btnazul = document.querySelector("#btnazul");
+        const bloque = document.querySelector("#bloque");
+
+        const listaColores = ["red", "blue", "green", "pink", "brown"];
+        let colorId = 0;
+
+        btnColor.addEventListener("click", cambiarColorSimple);
+        btnazul.addEventListener("click", () => cambiarColor("blue"));
+        btnrojo.addEventListener("click", () => cambiarColor("red"));
+
+        function cambiarColorSimple() {
+            console.log("cambio a color:");
+            colorId++;
+            if (colorId == listaColores.length) { colorId = 0; }
+            bloque.style.backgroundColor = listaColores[colorId];
+
+        }
+
+        function cambiarColor(color) {
+            console.log("cambiar a color", color);
+            bloque.style.backgroundColor = color;
+        }
+        //rojo.addEventListener("click",()=>{
+        //bloque.style.background="red"
+        // })
+
+        // azul.addEventListener("click",()=>{
+        //bloque.style.background="blue"
+        // })
+    </script>
+</body>
+
+</html>
