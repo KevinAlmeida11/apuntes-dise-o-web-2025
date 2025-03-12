@@ -25,6 +25,8 @@
         const btnPiedra = document.querySelector("#btnPiedra");
         const btnPapel = document.querySelector("#btnPapel");
         const btnTijera = document.querySelector("#btnTijera");
+        const
+
 
         const divResultado = document.querySelector("#txtResultado");
         const spanGanadas = document.querySelector("#txtGane");
@@ -38,9 +40,7 @@
         btnPapel.addEventListener("click", () => { jugar("papel"); });
         btnTijera.addEventListener("click", () => { jugar("tijeras"); });
 
-        btnAutoplay.addEventListener("click", () => {
-            jugar
-        })
+        btnAutoplay.addEventListener("click", () => (AiVsAi));
 
         const cantGanaste = 0;
         const cantPerdiste = 0;
@@ -78,7 +78,7 @@
             },1000);//  tiempo en milisegundo (1000=!segundo)
 
         }
-        
+
         //que obtuvo el ordenador
         function seleccionDeIA() {
             const opciones = ['piedra', 'papel', 'tijeras'];
