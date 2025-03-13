@@ -57,7 +57,7 @@ Es un objeto que contiene informacion sobre el evento ocurrido.Este se para auto
 
 ```js
 
-function handleClick(){
+function handleClick(e){
     console.log("El boton ha sifo clickeado");
     console.log("coordenadas del mouse:" ,e.clientX,e.clientY)
 }

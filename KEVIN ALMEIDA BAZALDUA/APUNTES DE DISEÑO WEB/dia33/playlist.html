@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playlist</title>
+</head>
+
+<body>
+    <h3>Reproductor</h3>
+
+<div id="playList">
+<!-- aca van mis canciones -->
+ <div class="card">
+    <span class="artista">artista</span>
+    <span class="mp3">cancion</span>
+ </div>
+
+</div>
+    <script>
+        //https://freemusicarchive.org/genre/Instrumental/ 
+const playList=document.querySelector("#playList")
+
+        const ListaCanciones = [
+            "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        ];
+
+
+        const listaArtistas = [
+            "linkin Park",
+            "skillet",
+            "Libido",
+            "David Guetta",
+            "Gordo"
+        ];
+         const cantidadItems=liostaArtistas.lenght;
+
+        //for(let i=0;i<listaCanciones.lenght;i++){
+            //const cancion=listaCanciones(i);
+            //const artista=listaArtistas(i);
+       // }
+
+        ListaCanciones.forEach((cancion ,idx)=> {
+            const artista=listaArtistas[idx];
+            console.log(listaArtistas[idx]);
+            console.log(cancion);
+        });
+
+        //ListaArtista.forEach(artista => {
+          //  console.log(artista);
+        //})
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cafe {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 33.33%;
+        }
+
+        .cafe__img {
+            width: 250px;
+            height: 250px;
+            background-color: aquamarine;
+        }
+
+        .bocadillo {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 33.33%;
+        }
+
+        .bocadillo__img {
+            width: 250px;
+            height: 250px;
+            background-color: aquamarine;
+        }
+
+        .bebida {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 33.33%;
+        }
+
+        .bebida__img {
+            width: 250px;
+            height: 250px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <div class="cafe">
+
+            <h2>Café</h2>
+
+            <img class="cafe__img" src="#" alt="Cafe">
+            Agregar:
+            <div class="botones">
+                <button id="btnCafe1">Agregar 1</button>
+                <button id="btnCafe2">Agregar 2</button>
+                <button id="btnCafe3">Agregar 3</button>
+            </div>
+        </div>
+
+        <div class="bocadillo">
+
+            <h2>Bocadillo</h2>
+
+            <img class="bocadillo__img" src="#" alt="Cafe">
+            Agregar:
+            <div class="botones">
+                <button id="btnBoca1">Agregar 1</button>
+                <button id="btnBoca2">Agregar 2</button>
+                <button id="btnBoca3">Agregar 3</button>
+            </div>
+        </div>
+
+        <div class="bebida">
+
+            <h2>Bebida</h2>
+
+            <img class="bebida__img" src="#" alt="Cafe">
+            Agregar:
+            <div class="botones">
+                <button id="btnDrnk1">Agregar 1</button>
+                <button id="btnDrnk2">Agregar 2</button>
+                <button id="btnDrnk3">Agregar 3</button>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+    <section>
+        <h2>Pedido</h2>
+        <button class="btn" id=""></button>
+        <button class="btn" id=""></button>
+    </section>
+
+
+    <script>
+        //
+        const btnCafe1 = document.querySelector("#btnCafe1");
+        const btnCafe2 = document.querySelector("#btnAgregar2");
+        const btnCafe3 = document.querySelector("#btnAgregar3");
+
+        const btnBoca1 = document.querySelector("#btnAgregar1");
+        const btnBoca2 = document.querySelector("#btnAgregar2");
+        const btnBoca3 = document.querySelector("#btnAgregar3");
+
+        const btnDrnk1 = document.querySelector("#btnAgregar1");
+        const btnDrnk2 = document.querySelector("#btnAgregar2");
+        const btnDrnk3 = document.querySelector("#btnAgregar3");
+
+        const resultado = document.querySelector("#btnAgregar3");
+        const
+        let totalItems = 0;
+        let cantCafe = 0;
+        let cantCafe = 0;
+        let cantCafe = 0;
+
+        btnCafe1.addEventListener("click", () => AgregarCarrito(1, "cafe"));
+        btnCafe2.addEventListener("click", () => AgregarCarrito(2, "cafe"));
+        btnCafe3.addEventListener("click", () => AgregarCarrito(3, "cafe"));
+
+        btnBoca1.addEventListener("click", () => AgregarCarrito(1, "boca"));
+        btnBoca2.addEventListener("click", () => AgregarCarrito(2, "boca"));
+        btnBoca3.addEventListener("click", () => AgregarCarrito(3, "boca"));
+
+        btnDrnk1.addEventListener("click", () => AgregarCarrito(1, "drnk"));
+        btnDrnk2.addEventListener("click", () => AgregarCarrito(2, "drnk"));
+        btnDrnk3.addEventListener("click", () => AgregarCarrito(3, "drnk"));
+
+        // btnTotal.addEventListener("click", MostrarTotal);
+
+        btnVaciar.addEventListener("click", BorrarCarrito);
+
+
+        //funcion de agregar carrito
+        function AgregarCarrito(cant, tipo) {
+            console.log("Agreganbdo cantidad:", cant);
+            switch (tipo) {
+                case "cafe": cantCafe += cant; break;
+                case "boca": cantBoca += cant; break;
+                case "drink": cantDrnk += cant; break;
+            }
+            totalItems += cant;
+            MostrarTotal();
+        }
+
+        //funcion de mostrar totales
+        function MostrarTotal() {
+            resultado.innerHtml =
+                `<ul class="ListaResultados">
+                    <li>Cafe</li>
+                    <li>Bocadillo</li>
+                     <li>Bedida</li>
+                    </ul>`
+                ;
+        }
+        //funcion Borrar carrito
+        function BorrarCarrito() {
+            totalItems = 0;
+            cantCafe = 0;
+            cantBocadillo = 0;
+
+
+        }
+
+        //parte 3:Iniciar programa
+        MostrarTotal();
+    </script>
+    crear 3 secciones(cafe,Bocadillo,bebida)
+    para cada seccion :crear 3 botones:
+    -Agregar 1 al carrito
+    -Agregar 2 al carrrito
+    -agregar al 3 carrrito
+
+    Agregar un boton al final para ver total de items
+    Agregar un boton para vaciar el carrito
+
+    <script>
+        //funcion de agregar a carrito
+        //funcion de mostrar totales
+        //funcion de borrar carrito
+    </script>
+</body>
+
+</html>
