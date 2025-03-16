@@ -1,0 +1,99 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 90%;
+    max-width: 56.25rem;
+    height: 300px;
+
+    margin: 2rem auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1rem;
+}
+
+.grid .img {
+   
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Evita que la imagen sobresalga */
+
+
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff;
+    cursor: pointer;
+    transition: all.5s ease;
+
+}
+
+.grid .img:hover {
+    transform: scale(0.95);
+}
+
+.grid .img:active {
+    transform: scale(1.1);
+}
+
+.grid .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lightbox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(2rem);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    opacity: 0;
+    pointer-events: none;
+    transition:all .5s ease ;
+}
+
+.lightbox .isActive{
+opacity: 1;
+pointer-events: auto;
+}
+.lightbox .close {
+    width: 3rem;
+
+    color: white;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.lightbox .close:hover {
+    tranform: scale(0.95);
+}
+
+.lightbox .close:active {
+    tranform: scale(1.1);
+}
+
+.lightbox .svg {}
+
+.lightbox .grande {
+    width: 90%;
+    max-width: 900px;
+    height: 70vh;
+
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .4);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lightbox</title>
+    <link rel="stylesheet" href="./lightbox.css">
+
+</head>
+<body>
+    <div class="grid">
+        <img class="img" src="./img/AUDI.jpg" alt="imagen0">
+        <img class="img" src="./img/BMW.jpg" alt="imagen1">
+        <img class="img" src="./img/PORSCHE.jpg" alt="imagen2">
+    </div>
+
+    <div class="lightbox">
+        <button class="close">
+            <svg class="svg" xmlns="http://www.w3.org/2000/svg"  fill="currentColor"  viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+              </svg>
+        </button>
+
+        <img class="grande" alt="imagen grande">
+    </div>
+   
+    <script>
+        const imgList=document.querySelectorAll(".img");
+        const lightbox=document.querySelector(".lightbox");
+        const grande=document.querySelector(".grande");
+        const closeBtn=document.querySelector(".close");
+//cuando hago click en img.
+//.lightbox se le ADD la clase is Active
+//.grande añadirle el atributo SRC de la img
+
+        imgList.forEach((imagen,index)=>{
+            imgList[index].addEventListener(`click`,()=>{
+
+                lightbox.classList.add(`isActive`);
+                grande.src= imgList[index].src;
+               
+            });
+        })
+
+//cuando hago click en close
+//lightbox se le remove la clase is Active
+closeBtn.addEventListener("click",()=>{
+    lightbox.classList.remove(`isActive`);
+})
+    </script>
+</body>
+</html>

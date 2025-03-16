@@ -1,0 +1,46 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    }
+
+
+    .acordeon {
+        width: 300px;
+        border: 1px solid #ccc;
+       border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del acordeón */
+    }
+
+    .bloque {
+       
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra en cada bloque */
+    }
+
+    .h2 {
+        cursor: pointer;
+        background: #f5f5f5;
+        padding: 10px;
+        margin: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra en los títulos */
+        border-radius: 5px;
+    }
+
+    .contenido {
+        display: none;
+        padding: 10px;
+        background: #fafafa;
+        border-radius: 5px;
+    }
+
+    .activo .contenido {
+        display: block;
+    }
+
+    .bloque.activo {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más grande en el bloque activo */
+    }
+

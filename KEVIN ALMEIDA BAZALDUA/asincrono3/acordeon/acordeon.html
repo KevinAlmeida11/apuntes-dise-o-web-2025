@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACORDEON</title>
+    <link rel="stylesheet" href="./acordeon.css">
+   
+</head>
+<body>
+    <div class="acordeon">
+        <div class="bloque activo">
+          <h2 class="h2">Indice 0</h2>
+          <div class="contenido">Bloque de Información 0</div>
+        </div>
+        <div class="bloque">
+          <h2 class="h2">Indice 1</h2>
+          <div class="contenido">Bloque de Información 1</div>
+        </div>
+        <div class="bloque">
+          <h2 class="h2">Indice 2</h2>
+          <div class="contenido">Bloque de Información 2</div>
+        </div>
+        <div class="bloque">
+          <h2 class="h2">Indice 3</h2>
+          <div class="contenido">Bloque de Información 3</div>
+        </div>
+      </div>
+
+      <script>
+        
+        const bloques = document.querySelectorAll(".bloque");
+        const titulos = document.querySelectorAll(".h2");
+
+        titulos.forEach((titulo, i) => {
+            titulo.addEventListener("click", () => {
+                // Si el bloque ya está activo, lo cerramos
+                if (bloques[i].classList.contains("activo")) {
+                    bloques[i].classList.remove("activo");
+                } else {
+                    // Cerramos todos los bloques
+                    bloques.forEach(bloque => bloque.classList.remove("activo"));
+                    // Activamos el bloque clickeado
+                    bloques[i].classList.add("activo");
+                }
+            });
+        });
+      </script>
+</body>
+</html>
