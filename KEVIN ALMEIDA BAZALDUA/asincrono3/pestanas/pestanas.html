@@ -25,8 +25,16 @@
     const li=document.querySelectorAll(".li")
     const bloque=document.querySelectorAll(".bloque")
 
-    li.forEach(cadaLi,i)=>
-        li
+    li.forEach((cadaLi,i)=>{
+        li[i].addEventListener("click",()=>{
+            li.forEach((cadaLi,i)=>{
+             li.classList.remove('activo');
+             bloque[i].classList.remove('activo');
+            });
+        li[i].classList.add('activo');
+        bloque.classList.add('activo');
+        })
+    })
    </script>
 
 </body>
