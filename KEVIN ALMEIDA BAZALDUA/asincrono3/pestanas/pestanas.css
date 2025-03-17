@@ -1,0 +1,64 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+width: 90%;
+max-width: 120em;
+
+}
+
+.contenedor .ul{
+width: 100%;
+
+
+display: flex;
+flex-flow: row nowrap;
+justify-content: flex-start;
+align-items: center;}
+
+.contenedor .li{
+
+padding: 1em;
+margin: 0 1em 0 0;
+}
+
+.contenedor .li{
+   
+    padding: 1em;
+    margin: 0 1em 0 0;
+    list-style: none;
+    transition: all .5s ease;
+} 
+
+.contenedor .li.activo{
+    background-color: lightgreen;
+    padding: 1em;
+    margin: 0 1em 0 0;
+    list-style: none;
+}    
+
+.contenedor .subcontenedor{
+    min-height: 10vh;
+
+position: relative;
+}
+
+.contenedor .bloque{
+
+margin: 1em;
+padding:1em;
+
+position: absolute;
+top: 2em;
+opacity: 0;
+transition: all .5s ease;
+}
+
+
+.contenedor .bloque.activo{
+opacity: 1;
+    }
