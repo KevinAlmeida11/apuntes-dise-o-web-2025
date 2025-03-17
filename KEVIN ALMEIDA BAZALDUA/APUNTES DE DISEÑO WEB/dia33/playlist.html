@@ -5,24 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>playlist</title>
+    <style>
+        .card {
+            border-radius: 8px;
+            background-color: lightgray;
+            padding: 10px;
+            width: 400px;
+            margin: 20px;
+            /* text-align:center*/
+            box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .controllers {
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <h3>Reproductor</h3>
 
-<div id="playList">
-<!-- aca van mis canciones -->
- <div class="card">
-    <span class="artista">artista</span>
-    <span class="mp3">cancion</span>
- </div>
+    <div id="playList">
+        <!-- aca van mis canciones
+     
+    <div class="card">
+        <span>artista</span>
+        <span>cancion</span>
+    </div>-->
+    </div>
 
-</div>
+    <div id="cancionActual">
+        aca ira la cancion cancionActual
+
+    </div>
+    <div class="controllers">
+        <button id="btn3">Tema 3</button>
+        <button id="btnNext">Next</button>
+        <button id="btnPlay">Play</button>
+        <button id="btnPause">Pause</button>
+        <button id="btnPrev">Prev</button>
+    </div>
+
+
+
+
     <script>
-        //https://freemusicarchive.org/genre/Instrumental/ 
-const playList=document.querySelector("#playList")
+//parte1
 
-        const ListaCanciones = [
+        //https://freemusicarchive.org/genre/Instrumental/ 
+        const playList = document.querySelector("#playList");
+        const controllers = document.querySelector(".controllers");
+        const btn3 = controllers.querySelector("#btn3");
+        const cancionActual=document.querySelector("#cancionActual");
+        let idCancion=0;//id de la cancion reproduciendose
+
+        //const listaBotones=controllers.querySelectorAll("button");
+
+
+
+        const listaCanciones = [
             "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
             "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3", "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
         ];
@@ -35,22 +78,70 @@ const playList=document.querySelector("#playList")
             "David Guetta",
             "Gordo"
         ];
-         const cantidadItems=liostaArtistas.lenght;
+       
+        const listaColores = ["Rojo", "verde", "azul", "naranja", "negro"];
+        const listaCover=[
+        "https://picsum.photos/seed/picsum/200/300",
+        "https://picsum.photos/seed/picsum/200/300",
+        "https://picsum.photos/seed/picsum/200/300",
+        "https://picsum.photos/seed/picsum/200/300",
+       "https://picsum.photos/seed/picsum/200/300",
+        ]
+
+
+        const cantidadItems = listaArtistas.lenght;
 
         //for(let i=0;i<listaCanciones.lenght;i++){
-            //const cancion=listaCanciones(i);
-            //const artista=listaArtistas(i);
-       // }
+        //const cancion=listaCanciones(i);
+        //const artista=listaArtistas(i);
+        // }
 
-        ListaCanciones.forEach((cancion ,idx)=> {
-            const artista=listaArtistas[idx];
-            console.log(listaArtistas[idx]);
-            console.log(cancion);
+        listaCanciones.forEach((cancion, idx) => {
+            //accedemos a suas elementos relacionados
+            const artista = listaArtistas[idx];
+            const color = listaColores[idx];
+            const imagen=listCover[idx];
+           // console.log(artista);
+            //console.log(cancion);
+//el += concatena el valor anterior con este nuevo valor.
+            playList.innerHTML += `<div class="card" id="${idx}">
+                                    <img src="${imagen}"></img>
+                                    <h3>${artista}</h3>
+                                    <span>${cancion}</span>
+                                    </div>`;
         });
 
-        //ListaArtista.forEach(artista => {
-          //  console.log(artista);
-        //})
+        const handleCargarCancion = () => {
+            console.log("me hicieron click ", i);
+            //imprimir en consola los datos de la cancion#3
+
+            const artista = listaArtistas[idCancion];
+            const cancion = listaCanciones[idCancion];
+
+            console.log("El artista es: ", artista, "y la cancion es:", cancion);
+
+            cancionActual.innerHTML=`<h3>${artista}</h3>
+                                    <span>${cancion}</span>`;
+
+        }
+        btn3.addEventListener("click", () => 
+        handleCargarCancion());
+
+        //agregar eventlistener de click al documento
+        //podemos acceder a distintos valores como por jemplo al id del target.
+        document.addEvenListener("click", (e) => {
+            console.log(event.target.id);
+            handleCargarCancion();
+        });
+        //parte 3
+
+//reproduccion actual
+handleCargarCancion();
+
+        //handleCargarCancion(1);
+       // handleCargarCancion(2);
+        //handleCargarCancion(3);
+
 
 
     </script>

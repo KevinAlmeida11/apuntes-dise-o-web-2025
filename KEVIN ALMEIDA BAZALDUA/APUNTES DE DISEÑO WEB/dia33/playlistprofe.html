@@ -1,0 +1,61 @@
+// Parte 1
+        const playList = document.getElementById("playlist");
+        const controllers = document.querySelector(".controllers");
+        const btn3 = controllers.querySelector("#btn3");
+        const cancionActual = document.querySelector("#cancionActual");
+
+        let idCancion = 1; // id de la canción reproduciondose.
+
+        // const listaBotones = controllers.querySelectorAll("button");
+        // console.log("Los botones son:", listaBotones);
+listaCanciones.forEach( (cancion, idx) => {
+
+            // accedemos a sus elementos relacionados
+            const artista = listaArtistas[idx];
+            const color = listaColores[idx];
+            const imagen = listaCover[idx];
+
+            // console.log(cancion);
+            // console.log(artista);
+
+            // el += concatena el valor anterior con este nuevo valor.
+            playList.innerHTML += `<div class="card" id="${idx}">
+                                        <img src=
+// el += concatena el valor anterior con este nuevo valor.
+            playList.innerHTML += `<div class="card" id="${idx}">
+                                        <img src="${imagen}" />
+                                        <div>
+                                            <h3>${artista}</h3>
+                                            <span>${cancion}</span>
+                                        </div>
+                                    </div>`;
+
+        });
+const handleCargarCancion = ()=> {
+            // imprimir en consola los datos de canción #i
+            // console.log("me hicieron click en tema: ",i);
+
+            const artista = listaArtistas[idCancion];
+            const cancion = listaCanciones[idCancion];
+
+            console.log("El artista es: ",artista, " y la cancion es: ", cancion);
+
+            cancionActual.innerHTML = ` <h3>${artista}</h3>
+                                        <span>${cancion}</span>`;
+        }
+Tomás Sánchez
+22:06
+btn3.addEventListener("click", ()=> {
+            idCancion=3;
+            handleCargarCancion();
+        });
+// Agregar eventListener de click al documento
+        // podemos acceder a distinos valores como por ej: al id del target.
+        document.addEventListener("click", (e)=> {
+            console.log(event.target.id);
+            handleCargarCancion();
+        })
+
+        // Parte 3
+        // Reprodución canción actual
+        handleCargarCancion();

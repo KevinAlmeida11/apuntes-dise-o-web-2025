@@ -68,7 +68,7 @@
     transition:all .5s ease ;
 }
 
-.lightbox .isActive{
+.lightbox.isActive{
 opacity: 1;
 pointer-events: auto;
 }
@@ -81,11 +81,11 @@ pointer-events: auto;
 }
 
 .lightbox .close:hover {
-    tranform: scale(0.95);
+    transform: scale(0.95);
 }
 
 .lightbox .close:active {
-    tranform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .lightbox .svg {}
