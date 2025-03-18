@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pestañas/tabs</title>
+    <style>
+        .bloque {
+            display: none;
+        }
+
+        .bloque.active {
+            display: block;
+        }
+
+        .tablist{
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+        }
+
+        .tab.active{
+
+            color:red;
+            border-bottom: 1px;
+        }
+        .tab:hover{
+            color:blue
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pestañas/Tabs</h1>
+    <ul class="tablist">
+        <li class="tab active">boton1</li>
+        <li class="tab">boton2</li>
+        <li class="tab">boton3</li>
+    </ul>
+
+    <div class="bloque"> a mi no me seleccionan porque no estoy dentro de .contentList</div>
+
+    <main class="contentlist">
+        <div class="bloque active">Contenido1</div>
+        <div class="bloque">Contenido2</div>
+        <div class="bloque">Contenido3</div>
+
+    </main>
+
+    <script>
+        const containerBloques = document.querySelector(".contentlist");
+        const listaBloques = containerBloques.querySelectorAll(".bloque");
+        const listaTabs = document.querySelectorAll(".tab");
+
+        //listaBloques.forEach((bloque)=>{
+        //console.log(bloque);
+        //})
+
+        listaTabs.forEach((tab,idx) => {
+            //console.log(tab);
+           // console.log("indice :",idx);
+
+            //console.log(tab);
+           // console.log(listaTabs[idx]);
+            //console.log(listaBloques[idx]);
+
+
+            listaTabs[idx].addEventListener("click", () => {
+
+                //a todos los bloques sacarle la clase .active
+                listaBloques.forEach((bloque,id) => {
+                    listaBloques[id].classList.remove("active");
+                    listaTabs[id].classList.remove("active");
+                })
+
+                //agregar la clase. active al bloque
+
+                listaBloques[idx].classList.add("active");
+                listaTabs[idx].classList.add("active");
+            });
+        })
+    </script>
+</body>
+
+</html>
