@@ -87,3 +87,11 @@ body {
 .nav-button:hover {
     color: #000;
 }
+
+/* card cancion*/
+
+.cardCancion{
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #;
+}
