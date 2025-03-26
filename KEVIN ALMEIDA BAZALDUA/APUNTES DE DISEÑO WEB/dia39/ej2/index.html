@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax multiple ej2</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+
+    <section class="seccion-normal">
+        <h1>scroll para ver el efecto parallax</h1>
+        <p>esta es una seccion normal para ocupar espacio</p>
+    </section>
+    <!-- seccion parallax 1 -->
+    <section class="parallax-contenedor" id="seccion-1">
+        <!-- Elemento que contenga al fondo de nuestra ventana -->
+        <div class="parallax-bg" style="background-image: url('./img/fondo.jpg');"></div>
+
+        <div class="parallax-contenido">
+            <h2>Titulo impactante</h2>
+            <p>Este contenidp esta sobre el parallax</p>
+            <!-- añadir una imagen pequeña que tambien se mueva -->
+            <img src="./img/lobo.png" alt="Decoracion" class="parallax-elemento-flotante" id="flotante-1"
+                data-parallax-type="moveY,rotate" data-parallax-speed="0.2" data-parallax-direction="-1">
+            <!-- direction -1 invierte el movimiento/rotacion base -->
+        </div>
+    </section>
+
+
+    <section class="seccion-normal">
+        <h1>scroll para ver el efecto parallax</h1>
+        <p>esta es una seccion normal para ocupar espacio</p>
+    </section>
+
+    </section>
+    <!-- seccion parallax 2 -->
+    <section class="parallax-contenedor" id="seccion-2">
+        <!-- Elemento que contenga al fondo de nuestra ventana -->
+        <div class="parallax-bg" style="background-image: url('./img/2112.w023.n001.1522B.p1.1522.jpg');"></div>
+
+        <div class="parallax-contenido">
+            <h2>Titulo impactante</h2>
+            <p>Este contenidp esta sobre el parallax</p>
+            <!-- añadir una imagen pequeña que tambien se mueva -->
+            <img src="./img/TIGRE.png" alt="Decoracion" class="parallax-elemento-flotante" id="flotante-2"
+                data-parallax-type="moveY,rotate" data-parallax-speed="0.2" data-parallax-direction="-1">
+            <!-- direction -1 invierte el movimiento/rotacion base -->
+        </div>
+    </section>
+
+
+    <section class="seccion-normal">
+        <h1>scroll para ver el efecto parallax</h1>
+        <p>esta es una seccion normal para ocupar espacio</p>
+    </section>
+</section>
+<!-- seccion parallax 3 -->
+<section class="parallax-contenedor" id="seccion-3">
+    <!-- Elemento que contenga al fondo de nuestra ventana -->
+    <div class="parallax-bg" style="background-image: url('./img/2110.w023.n001.1229B.p1.1229.jpg');"></div>
+
+    <div class="parallax-contenido">
+        <h2>Titulo impactante</h2>
+        <p>Este contenidp esta sobre el parallax</p>
+        <!-- añadir una imagen pequeña que tambien se mueva -->
+        <img src="./img/AGUILA.png" alt="Decoracion" class="parallax-elemento-flotante" id="flotante-3"
+        data-parallax-type="moveY,opacity"
+        data-parallax-speed="0.5"
+        data-parallax-direction="-1"
+        >
+        <!-- direction -1 invierte el movimiento/rotacion base -->
+    </div>
+</section>
+
+
+</body>
+
+</html>

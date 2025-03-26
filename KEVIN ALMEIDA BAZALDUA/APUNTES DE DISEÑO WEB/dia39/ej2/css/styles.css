@@ -1,0 +1,82 @@
+.parallax-contenedor{
+    position: relative; /*  necesario para posicionar hijos en absolute*/
+    height: 80vh;
+    overflow: hidden;/* ocultar parte del fondo que no entre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    text-align: center;
+}
+
+.parallax-bg{
+    position: absolute;
+    top: -20px;/* empezar un poco mas arriba para tener margen de movimiento */
+    left:0;
+    width: 100%;
+    height: 140%;
+
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center center;
+    /* z-index: -1;asegurarnos que quede por detras de nuestro elemento */
+
+}
+/* estilos para el elemento flotante que acompaña a parallax */
+/* posicion inicial sera independiente para cada elemento */
+.parallax-elemento-flotante{
+    position: absolute;
+    bottom:10%;
+    width: 100px;
+    right: 15%;
+    z-index: 2;
+}
+
+#flotante-1{
+    bottom:15%;
+    left: 10%;
+    width: 120px;
+}
+
+#flotante-2{
+    bottom:20%;
+    left: 5%;
+    width: 100px;
+}
+
+#flotante-3{
+    bottom:10%;
+    left: 15%;
+    width: 180px;
+    opacity: 0;
+}
+
+
+
+
+.parallax-contenido{
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 8px;
+    color: white;
+}
+
+.seccion.normal{
+    min-height: 20vh;  /* para poder hacer scroll */
+    padding: 40px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+@media (prefers-reduced-motion: reduce){
+.parallax-bg,.parallax-elemento-flotante{
+    /* desactivar transition,animaciones y efectos */
+    transition:none;
+
+}
+body{
+    background-color: red;
+}
+}
