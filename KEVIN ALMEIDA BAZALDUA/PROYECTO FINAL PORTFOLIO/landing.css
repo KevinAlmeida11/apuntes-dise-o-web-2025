@@ -30,8 +30,11 @@
   list-style: none;
   gap: 10px;
   padding-right: 20px;
+  transition: transform 0.3s ease;   /* animación al pasar el mouse */
 
 }
+
+
 
 .hero-image {
   /* colocamos un display grip y distribuimos el contenido en 1 columna y 1 fila.Luego colocamos las clases  en el grid-template-areas  para hacer la distribucion y en cada clase le agregamos el grid-area.*/
@@ -195,13 +198,10 @@
 .programas__iconos img {
   width: 50px;
   height: 50px;
-  transition: transform 0.3s ease;   /* animación al pasar el mouse */
-
+  
 }
 
-.programas__iconos:hover {
-  transform: scale(1.02);           /* pequeño zoom al pasar el mouse */
-}
+
 
 .programas__nombres {
   display: flex;
