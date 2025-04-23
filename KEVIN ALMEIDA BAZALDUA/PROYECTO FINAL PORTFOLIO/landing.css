@@ -1,104 +1,224 @@
 /* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .contenedor {
-    /* colocamos a todo el documneto color de fondo negro,con una orientacion en columna (vertical)*/
-    background-color: #101010;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  /* colocamos a todo el documneto color de fondo negro,con una orientacion en columna (vertical)*/
+  background-color: #101010;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
 }
 
-.header{
-   /* colocamos el color blaco para las letras */
-    color: white;
+.header {
+  /* colocamos el color blaco para las letras */
+  color: white;
 }
+
 .nav__list {
-     /* Le damos flex y modificamos la orientacion de manera de filas,justificada a la derecha y alineada al centro.Al listado le quitamos los  estilos para que los puntos desaparezcan,añadimos el color de fondo negro y el color de letra blanco.Asi mismo, le damos una separacion de 10 px y un padding de 20 px.*/
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    background-color: #101010;
-    color: white;
-    list-style: none;
-    gap: 10px;
-    padding-right: 20px;
+  /* Le damos flex y modificamos la orientacion de manera de filas,justificada a la derecha y alineada al centro.Al listado le quitamos los  estilos para que los puntos desaparezcan,añadimos el color de fondo negro y el color de letra blanco.Asi mismo, le damos una separacion de 10 px y un padding de 20 px.*/
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  background-color: #101010;
+  color: white;
+  list-style: none;
+  gap: 10px;
+  padding-right: 20px;
 
 }
 
 .hero-image {
-/* colocamos un display grip y distribuimos el contenido en dos columnas y dos filas.Luego colocamos las clases  en el grid-template-areas  para hacer la distribucion y en cada clase le agregamos el grid-area.*/
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "hero__content imagen__content "
-        "boton imagen__content";
-    gap: 60px;
-    padding: 2rem;
+  /* colocamos un display grip y distribuimos el contenido en 1 columna y 1 fila.Luego colocamos las clases  en el grid-template-areas  para hacer la distribucion y en cada clase le agregamos el grid-area.*/
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
 
-    color: white;
-    background-color:  #101010;
-    align-items: center;
+  grid-template-areas:
+    "hero__content imagen__content ";
+  gap: 60px;
+  padding: 2rem;
+
+  color: white;
+  background-color: #101010;
+  align-items: center;
 
 }
 
 .hero__content {
-     /* Le damos una horientacion  de  manera vertical con unaa separacion de 40 px. */
-    grid-area: hero__content;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  /* Le damos una horientacion  de  manera vertical con unaa separacion de 40 px. */
+  grid-area: hero__content;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 
 }
 
 
 .imagen__content {
 
-    grid-area: imagen__content;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+  grid-area: imagen__content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .imagen__content img {
-   /* le damos la medida del ancho y la altura le colocamos auto para que lo ajuste automaticamente */
-    max-width: 400px;
-    height: auto;
-   
+  /* le damos la medida del ancho y la altura le colocamos auto para que lo ajuste automaticamente */
+  max-width: 400px;
+  height: auto;
+
+
 
 }
 
-.boton {
-    grid-area: boton;
-    display: flex;
-    gap: 20px;
-    
-  }
-  .boton button{
-    /* le damos medidas de ancho y altura,además ledamos color de fondo verde y color de letra blanco */
-    background-color: #049d68;
-    color: white;
-    width: 120px;
-    height: 40px;
-    border-radius: 10px;
-  }
+.hero__botones {
 
-  .content__h2{
-    /* modificamos el tamaño de letra */
-    font-size:2rem ;
-  }
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  gap: 30px;
+  padding-top: 20px;
 
-  .content__h1{
-    /* modificamos el tamaño de letra y el color de letra */
-    font-size: 3.5rem;
-    color:#049d68;
-  }
-  .content__p{
-    font-size: 1.2rem;
-  }
+
+
+}
+
+.hero__botones button {
+  /* le damos medidas de ancho y altura,además ledamos color de fondo verde y color de letra blanco */
+  background-color: #049d68;
+  color: white;
+  width: 170px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.content__h2 {
+  /* modificamos el tamaño de letra */
+  font-size: 2rem;
+}
+
+.content__h1 {
+  /* modificamos el tamaño de letra y el color de letra */
+  font-size: 3.5rem;
+  color: #049d68;
+}
+
+.content__p {
+  font-size: 1.2rem;
+}
+
+
+.sobremi {
+  /* le damos un display grid para distribuirlo en filas y en columnas */
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas:
+    "sobremi-foto sobremi-descripcion ";
+
+  gap: 60px;
+  padding: 2rem;
+
+  color: white;
+  background-color: #101010;
+  align-items: center;
+}
+
+.sobremi-foto {
+  grid-area: sobremi-foto;
+ 
+}
+
+.sobremi__foto {
+  grid-area: sobremi-foto;
+  background-color: #181818;         /* fondo oscuro para contraste */
+  padding: 1rem;                     /* espacio interno */
+  border: 3px solid #049d68;         /* marco verde */
+  border-radius: 15px;               /* bordes redondeados */
+  
+  max-width: 300px;
+  margin: 0 auto;                    /* centrar horizontalmente */
+  transition: transform 0.3s ease;   /* animación al pasar el mouse */
+}
+
+.sobremi__foto:hover {
+  transform: scale(1.10);           /* pequeño zoom al pasar el mouse */
+}
+
+.sobremi__foto img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;              /* imagen redondeada  */
+  display: block;
+}
+
+.sobremi__descripcion {
+  grid-area: sobremi-descripcion;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+.descripcion__h2 {
+  font-size: 2rem;
+  color: #049d68;
+}
+
+.descripcion__p {
+  font-size: 1.2rem;
+}
+
+.descripcion__h3 {
+  font-size: 1.7rem;
+  color: #049d68;
+}
+
+.programas {
+  display: flex;
+  flex-direction: column;
+}
+
+.programas__iconos {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+.programas__iconos img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;   /* animación al pasar el mouse */
+
+}
+
+.programas__iconos:hover {
+  transform: scale(1.02);           /* pequeño zoom al pasar el mouse */
+}
+
+.programas__nombres {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+}
+
+.programas__nombres p {
+  font-size: 13px;
+}
+
+.descripcion__boton button {
+  /* le damos medidas de ancho y altura,además ledamos color de fondo verde y color de letra blanco */
+  background-color: #049d68;
+  color: white;
+  width: 170px;
+  height: 40px;
+  border-radius: 10px;
+}
